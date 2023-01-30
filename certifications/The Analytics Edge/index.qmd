@@ -1,0 +1,23 @@
+---
+title: "The Analytics Edge"
+author: "John Karuitha"
+date: today
+categories: [R, Statistics, analysis, Data Science, Machine Learning]
+image: "image.jpg"
+---
+
+The [Analytics Edge](https://www.edx.org/course/the-analytics-edge) is a project based course offered by the Massachusetts Institute of Technology (MIT) on EdX that impart skills in R, Statistics, and the basics of machine learning. The nine courses are:
+
+-   Data Science: R Basics
+-   Data Science: Visualization
+-   Data Science: Probability
+-   Data Science: Inference and Modeling
+-   Data Science: Productivity Tools
+-   Data Science: Wrangling
+-   Data Science: Linear Regression
+-   Data Science: Machine Learning
+-   Data Science: Capstone
+
+My final certificate is available on this [link](https://courses.edx.org/certificates/0348a316d7e34fa3be5541880f47e005) <https://courses.edx.org/certificates/0348a316d7e34fa3be5541880f47e005>
+
+The URL for the course website is <https://www.edx.org/professional-certificate/harvardx-data-science>

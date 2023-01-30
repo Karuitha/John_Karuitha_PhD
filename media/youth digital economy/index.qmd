@@ -1,0 +1,11 @@
+---
+title: "Youth and the digital economy in Africa"
+author: "John Karuitha"
+date: "2020-07-31"
+categories: [news, Youth, analysis, ICT, Digital, Africa Portal]
+image: "image.jpg"
+---
+
+The article appears in The WITS ACSUS website, July 31, 2020. Follow the link below.
+
+<https://www.africaportal.org/features/youth-and-digital-economy-africa/>

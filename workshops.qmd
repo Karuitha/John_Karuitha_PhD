@@ -1,0 +1,68 @@
+---
+title: "Conferences and Workshops"
+listing: 
+    contents: workshops
+    sort: "date desc"
+    type: default
+    categories: true
+    sort-ui: false
+    filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+## *Academic Conferences*
+
+I have presented the following papers at international conferences and received positive feedback both on the content and mode of presentation.
+
+1. Is “Micro” too Small: Microfinance and Financial Inclusion in Africa. 2019 Global Development Finance Conference. AfricaGrowthInstitute. November 5-6, 2019, Johannesburg, South Africa. 
+
+2. Microfinance and Financial inclusion in Africa. Africa Review of Economics and Finance Conference- The Political Economy of Africa’s development. 29-30 August 2019. Wits Business School. University of the Witwatersrand, Johannesburg, South Africa. 
+
+3. Econometrics Seminar. Wits Business School, University of the Witwatersrand, Johannesburg. Seminar delivered by Prof. Theodore Panagotidis of the University of Macedonia, Greece. May 27-31, 2019.  Johannesburg, South Africa. 
+
+4. A case for the adoption of big data analytics in fraud risk assessment in public sector audits in Kenya. Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies. 15-17 June 2016, Karatina, Kenya.
+
+5. Do media representation and investor perception influence the flow of capital to developing countries? Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies, 15-17 June 2016, Karatina, Kenya.
+
+6. The effects of automation on the efficiency of the Nairobi Securities Exchange. Laikipia University 3rd International Conference on Enhanced Utilization of Research, Science and Technology for Innovation and Sustainable Development in Africa, 24-27 May 2016, Nyahururu, Kenya (Presented by Dr Onyuma).
+
+7. Business cycles, financial crises and financial system regulation: lessons for Africa. Laikipia University College International Conference on Mediating crisis, diversity, and change in Africa. 20-23 June 2012, Nyahururu, Kenya. 
+
+8. Regional cross-listing and firm performance in East Africa. Moi University 7th International Conference 2011, 7-9 September 2011, Eldoret, Kenya. 
+
+9. Stock splits and stock liquidity. Moi University 7th International Conference 2011,  Eldoret, Kenya. 
+10. Do Stock splits affect the ownership structure of firms in Kenya? 6th Egerton University International research conference for innovation and development, 21-23 September 2011, Njoro, Kenya.
+
+## *Professional Conferences and Workshops*
+
+1. Times series forecasting training workshop. Hosted by InSupply Kenya at the Pride Inn Azure, Nairobi, Kenya (January 17-19, 2023).
+
+2. Secure Kenya III: ICT policies, standards, regulations and legislation. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (May 25-27, 2016).
+
+3. Data governance. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 9, 2016).
+
+4. Cybercrime black market awareness. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (February 25, 2016).
+
+5. The Advent of social media: risk and opportunities. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (January 28, 2016).
+
+6. Information security awareness. Workshop at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (September 25, 2015).
+
+7. Emerging threats in cybersecurity. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (August 25, 2015).
+
+8. Secure Kenya II: Cybersecurity and data governance in a growing economy. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (July 29 – 31, 2015).
+
+9. Business continuity management and disaster recovery. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 25, 2015).
+
+10. QuickBooks software and USAID accounting regulations and best practices. KCA University by AED CAP Kenya, Nairobi, Kenya (October 16- 17, 2008).
+
+11. Child protection training by Childline Kenya, Mwingi, Kenya (September 10-11, 2008).
+
+12. Identification, prioritization and validation of community-based needs assessment for Nakuru district under the EU-DGSP II, Hotel Kunste by CEDGG- Endorois, Nakuru, Kenya (October 2006).
+
+13. Validation workshop for the EU-DGSP devolved funds’ survey– Nakuru District, Hotel
+    Genevieve by KIPPRA- EU-DGSP/ CIDA project, Nakuru, Kenya (October 2006).
+    
+14. Field data collection. KIPPRA, Bishops Garden Tower, Nairobi, Kenya (April 2006).
+
+---

@@ -1,0 +1,19 @@
+---
+title: "Data Visualization in Tableau"
+author: "John Karuitha"
+date: "January 27, 2023"
+categories: [Tableau, Visualization, analysis, Data Science]
+image: "image.jpg"
+---
+
+The Tableau certification course offered by the University of California, Davis on Coursera that impart skills in data visualization using Tableau. The certification comprises of 5 courses as follows:
+
+-   Fundamentals of Visualization with Tableau.
+-   Essential Design Principles for Tableau.
+-   Visual Analytics with Tableau.
+-   Creating Dashboards and Storytelling with Tableau.
+-   Data Visualization with Tableau Project.
+
+My final certificate is available on this [link](https://www.coursera.org/account/accomplishments/verify/CA9P6ZDETNJH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course) <https://www.coursera.org/account/accomplishments/verify/CA9P6ZDETNJH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course>
+
+The URL for the course website is <https://www.coursera.org/specializations/data-visualization?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course>

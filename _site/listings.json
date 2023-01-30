@@ -1,0 +1,54 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/Motor vehicle Fuel Consumption/index.html",
+      "/projects/internet_europe/index.html",
+      "/projects/post-with-code/index.html",
+      "/projects/welcome/index.html",
+      "/projects/internet_europe_tableau/index.html"
+    ]
+  },
+  {
+    "listing": "/media.html",
+    "items": [
+      "/media/Value chains, Women and Youth in Africa Agriculture/index.html",
+      "/media/Women and Youth in Africa Agriculture/index.html",
+      "/media/ICT and Agriculture/index.html",
+      "/media/Impact investing/index.html",
+      "/media/youth digital economy/index.html",
+      "/media/University Education Quality/index.html",
+      "/media/Betting losses/index.html",
+      "/media/Neglect academic research/index.html",
+      "/media/Fintech lending/index.html",
+      "/media/Betting/index.html",
+      "/media/Academic Crisis/index.html"
+    ]
+  },
+  {
+    "listing": "/workshops.html",
+    "items": []
+  },
+  {
+    "listing": "/certifications.html",
+    "items": [
+      "/certifications/The Analytics Edge/index.html",
+      "/certifications/Data Science Professional Certificate/index.html",
+      "/certifications/tableau/index.html",
+      "/certifications/Data Scientist R/index.html",
+      "/certifications/Data Analyst R/index.html",
+      "/certifications/Big Data/index.html",
+      "/certifications/linux/index.html",
+      "/certifications/reproducible_research/index.html",
+      "/certifications/CISA/index.html",
+      "/certifications/CPA/index.html"
+    ]
+  }
+]

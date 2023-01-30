@@ -1,0 +1,13 @@
+---
+title: "Introduction to Big Data"
+author: "John Karuitha"
+date: "04-04-2022"
+categories: [Big Data, Hadoop, HDFS, Cloudera, MapReduce]
+image: "image.jpg"
+---
+
+The course introduces big data and the technologies for big data processing including Hadoop, Cloudera, and HDFS.
+
+My final certificate is available on this [link](https://www.coursera.org/account/accomplishments/certificate/CFSZW9N8GG3H) <https://www.coursera.org/account/accomplishments/certificate/CFSZW9N8GG3H>
+
+The URL for the course website is <https://www.coursera.org/learn/big-data-introduction>

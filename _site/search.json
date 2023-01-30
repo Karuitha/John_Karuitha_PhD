@@ -1,0 +1,275 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Professional Summary",
+    "section": "",
+    "text": "Finance and research professional passionate about applying data analytics and machine learning to Business, Economics and Finance. Currently, I teach finance and accounting at Karatina University\n\nI enjoy coding, teaching, research and data analytics.\n\nProficient in Ms Excel, R, Python, MySQL, PostgreSQL, Teradata, SQL Server, Git and GitHub, and Tableau.\nWorking knowledge of Bash, Docker, Stata and E-views.\nI hold a PhD in Financial Economics from University of the Witwatersrand, Johannesburg, South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).\nIn my free time I swim, travel, watch documentaries and listen to music."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Finance and research professional passionate about applying data analytics and machine learning to Business, Economics and Finance. Currently, I teach finance and accounting at Karatina University\n\nI enjoy coding, teaching, research and data analytics.\n\nProficient in Ms Excel, R, Python, MySQL, PostgreSQL, Teradata, SQL Server, Git and GitHub, and Tableau.\nWorking knowledge of Bash, Docker, Stata and E-views.\nI hold a PhD in Financial Economics from University of the Witwatersrand, Johannesburg, South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).\nIn my free time I swim, travel, watch documentaries and listen to music."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "John Karuitha, PhD",
+    "section": "",
+    "text": "<html>\n  <head>\n    <title>Title of the document</title>\n  </head>\n  <body>\n    <h1>PDF Example with iframe</h1>\n<iframe src=\"resume.pdf\" height=\"800\" width=\"800\"></iframe>\n</body>\n</html>"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Analyzing Motor Vehicle Fuel Consumption using R\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 27, 2023\n\n\nJohn Karuitha\n\n\n\n\n\n\n  \n\n\n\n\nVisualizing Internet Speed in Europe Using R\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\nanalysis\n\n\nTableau\n\n\n\n\n\n\n\n\n\n\n\nJan 27, 2023\n\n\nJohn Karuitha\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 24, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nVisualizing Internet Speed in Europe Using Tableau\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nTableau\n\n\n\n\n\n\n\n\n\n\n\n\nNov 27, 2022\n\n\nJohn Karuitha\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Motor vehicle Fuel Consumption/index.html",
+    "href": "posts/Motor vehicle Fuel Consumption/index.html",
+    "title": "Analyzing Motor Vehicle Fuel Consumption using R",
+    "section": "",
+    "text": "This post is a visualization of motor vehicle fuel consumption using R and ggplot2. The analysis shows that Japanese vehicles have significantly lower fuel consumption. Is this the reason Japanese cars rule the roads all over the world?\n\nif (!require(pacman)) {\n        install.packages(\"pacman\")\n        library(pacman)\n}\n\nLoading required package: pacman\n\npacman::p_load(tidyverse)\n\n\ndata(\"mpg\")\n#head(mpg)\n\n## There is high correlation between highway and city fuel consumption. Again, vehicles with more cylinders generally consume more fuel per mile/ kilometer.\n\nmpg %>% ggplot(mapping = aes(\n        x = cty, y = hwy,\n        size = cyl, color = manufacturer\n)) +\n        geom_point() +\n        theme_classic() +\n        theme(axis.line = element_blank()) + \n    labs(x = \"City\", y = \"Highway\",\n         title = \"Correlation Between City and Highway Fuel Consuption by Vehicle Model\",\n         subtitle = \"There is a high correlation between city and highway fuel consumption.\")\n\n\n\n## Japanese cars are very fuel efficient. \nmpg %>%\n        ggplot(mapping = aes(\n                x = fct_reorder(manufacturer, cty, median),\n                y = cty\n        )) +\n        geom_boxplot(aes(fill = manufacturer %in% c(\"toyota\", \"nissan\", \"subaru\", \"honda\")),\n                show.legend = FALSE\n        ) +\n        geom_point(shape = \".\") +\n        artyfarty::theme_ft() +\n        theme(axis.line = element_blank()\n              ) +\n        labs(\n                x = NULL, y = NULL, \n                title = \"City Fuel Consumption by Vehicle Make\",\n                subtitle = \"Cars made in Japan are More Fuel Efficient\"\n        ) +\n        scale_fill_manual(values = c(\"gray 80\", \"black\"))"
+  },
+  {
+    "objectID": "posts/internet_europe/index.html",
+    "href": "posts/internet_europe/index.html",
+    "title": "Visualizing Internet Speed in Europe",
+    "section": "",
+    "text": "This post is a visualization of internet speed in Europe using R and ggplot2.\n\n## Load required packages ----\nif (!require(pacman)) {\n        install.packages(\"pacman\")\n}\n\nLoading required package: pacman\n\npacman::p_load(\n        tidyverse, tidymodels, ggthemes, janitor,\n        rvest, countrycode, readxl, maps, mapproj\n)\n\n## load data ----\neuropenet <- read_xlsx(\"Average Internet Speeds Across Europe.xlsx\") %>%\n        clean_names() %>%\n        mutate(country_en = countrycode(\n                sourcevar = country,\n                origin = \"iso2c\",\n                destination = \"country.name\"\n        )) %>%\n        relocate(country_en, .after = country) %>%\n        mutate(country_en = case_when(\n                country == \"EL\" ~ \"Greece\",\n                country == \"BIH\" ~ \"Bosnia and Herzegovina\",\n                country == \"MDA\" ~ \"Moldova\",\n                country == \"UK\" ~ \"United Kingdom\",\n                country == \"XKO\" ~ \"Kosovo\",\n                TRUE ~ country_en\n        ))\n\nWarning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: BIH, EL, MDA, UK, XKO\n\nfull_data <- map_data(\"world\") %>%\n        inner_join(europenet, by = c(\"region\" = \"country_en\"))\n\n\n## Create a base map ----\nfull_data %>%\n        ggplot(aes(\n                x = long, y = lat, map_id = region,\n                fill = average_download_speed\n        )) +\n        geom_map(\n                map = full_data,\n                color = \"gray80\",\n                linewidth = 0.2\n        ) +\n        labs(x = \"\", y = \"\", title = \"Average Internet Download Speeds\") +\n        coord_map(\"ortho\", orientation = c(55, 16, 0)) +\n        theme_minimal() +\n        theme(\n                legend.title = element_blank(),\n                legend.position = \"bottom\",\n                legend.text = element_text(size = 5, face = \"italic\"),\n                axis.text = element_blank()\n        ) +\n        scale_fill_gradient_tableau(palette = \"Blue-Green Sequential\")"
+  },
+  {
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Conferences and Workshops",
+    "section": "",
+    "text": "Is “Micro” too Small: Microfinance and Financial Inclusion in Africa. 2019 Global Development Finance Conference. AfricaGrowthInstitute. November 5-6, 2019, Johannesburg, South Africa.\nMicrofinance and Financial inclusion in Africa. Africa Review of Economics and Finance Conference- The Political Economy of Africa’s development. 29-30 August 2019. Wits Business School. University of the Witwatersrand, Johannesburg, South Africa.\nEconometrics Seminar. Wits Business School, University of the Witwatersrand, Johannesburg. Seminar delivered by Prof. Theodore Panagotidis of the University of Macedonia, Greece. May 27-31, 2019. Johannesburg, South Africa.\nA case for the adoption of big data analytics in fraud risk assessment in public sector audits in Kenya. Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies. 15-17 June 2016, Karatina, Kenya.\nDo media representation and investor perception influence the flow of capital to developing countries? Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies, 15-17 June 2016, Karatina, Kenya.\nThe effects of automation on the efficiency of the Nairobi Securities Exchange. Laikipia University 3rd International Conference on Enhanced Utilization of Research, Science and Technology for Innovation and Sustainable Development in Africa, 24-27 May 2016, Nyahururu, Kenya (Presented by Dr Onyuma).\nBusiness cycles, financial crises and financial system regulation: lessons for Africa. Laikipia University College International Conference on Mediating crisis, diversity, and change in Africa. 20-23 June 2012, Nyahururu, Kenya.\nRegional cross-listing and firm performance in East Africa. Moi University 7th International Conference 2011, 7-9 September 2011, Eldoret, Kenya.\nStock splits and stock liquidity. Moi University 7th International Conference 2011, Eldoret, Kenya.\nDo Stock splits affect the ownership structure of firms in Kenya? 6th Egerton University International research conference for innovation and development, 21-23 September 2011, Njoro, Kenya."
+  },
+  {
+    "objectID": "media.html#professional-conferences-and-workshops",
+    "href": "media.html#professional-conferences-and-workshops",
+    "title": "Conferences and Workshops",
+    "section": "Professional Conferences and Workshops",
+    "text": "Professional Conferences and Workshops\n\nTimes series forecasting training workshop. Hosted by InSupply Kenya at the Pride Inn Azure, Nairobi, Kenya (January 17-19, 2023).\nSecure Kenya III: ICT policies, standards, regulations and legislation. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (May 25-27, 2016).\nData governance. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 9, 2016).\nCybercrime black market awareness. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (February 25, 2016).\nThe Advent of social media: risk and opportunities. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (January 28, 2016).\nInformation security awareness. Workshop at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (September 25, 2015).\nEmerging threats in cybersecurity. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (August 25, 2015).\nSecure Kenya II: Cybersecurity and data governance in a growing economy. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (July 29 – 31, 2015).\nBusiness continuity management and disaster recovery. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 25, 2015).\nQuickBooks software and USAID accounting regulations and best practices. KCA University by AED CAP Kenya, Nairobi, Kenya (October 16- 17, 2008).\nChild protection training by Childline Kenya, Mwingi, Kenya (September 10-11, 2008).\nIdentification, prioritization and validation of community-based needs assessment for Nakuru district under the EU-DGSP II, Hotel Kunste by CEDGG- Endorois, Nakuru, Kenya (October 2006).\nValidation workshop for the EU-DGSP devolved funds’ survey– Nakuru District, Hotel Genevieve by KIPPRA- EU-DGSP/ CIDA project, Nakuru, Kenya (October 2006).\nField data collection. KIPPRA, Bishops Garden Tower, Nairobi, Kenya (April 2006)."
+  },
+  {
+    "objectID": "workshops.html",
+    "href": "workshops.html",
+    "title": "Conferences and Workshops",
+    "section": "",
+    "text": "I have presented the following papers at international conferences and received positive feedback both on the content and mode of presentation.\n\nIs “Micro” too Small: Microfinance and Financial Inclusion in Africa. 2019 Global Development Finance Conference. AfricaGrowthInstitute. November 5-6, 2019, Johannesburg, South Africa.\nMicrofinance and Financial inclusion in Africa. Africa Review of Economics and Finance Conference- The Political Economy of Africa’s development. 29-30 August 2019. Wits Business School. University of the Witwatersrand, Johannesburg, South Africa.\nEconometrics Seminar. Wits Business School, University of the Witwatersrand, Johannesburg. Seminar delivered by Prof. Theodore Panagotidis of the University of Macedonia, Greece. May 27-31, 2019. Johannesburg, South Africa.\nA case for the adoption of big data analytics in fraud risk assessment in public sector audits in Kenya. Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies. 15-17 June 2016, Karatina, Kenya.\nDo media representation and investor perception influence the flow of capital to developing countries? Karatina University 1st School of Business International Conference on Entrepreneurship, Innovation and Research for Economic Development in Emerging Economies, 15-17 June 2016, Karatina, Kenya.\nThe effects of automation on the efficiency of the Nairobi Securities Exchange. Laikipia University 3rd International Conference on Enhanced Utilization of Research, Science and Technology for Innovation and Sustainable Development in Africa, 24-27 May 2016, Nyahururu, Kenya (Presented by Dr Onyuma).\nBusiness cycles, financial crises and financial system regulation: lessons for Africa. Laikipia University College International Conference on Mediating crisis, diversity, and change in Africa. 20-23 June 2012, Nyahururu, Kenya.\nRegional cross-listing and firm performance in East Africa. Moi University 7th International Conference 2011, 7-9 September 2011, Eldoret, Kenya.\nStock splits and stock liquidity. Moi University 7th International Conference 2011, Eldoret, Kenya.\nDo Stock splits affect the ownership structure of firms in Kenya? 6th Egerton University International research conference for innovation and development, 21-23 September 2011, Njoro, Kenya."
+  },
+  {
+    "objectID": "workshops.html#professional-conferences-and-workshops",
+    "href": "workshops.html#professional-conferences-and-workshops",
+    "title": "Conferences and Workshops",
+    "section": "Professional Conferences and Workshops",
+    "text": "Professional Conferences and Workshops\n\nTimes series forecasting training workshop. Hosted by InSupply Kenya at the Pride Inn Azure, Nairobi, Kenya (January 17-19, 2023).\nSecure Kenya III: ICT policies, standards, regulations and legislation. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (May 25-27, 2016).\nData governance. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 9, 2016).\nCybercrime black market awareness. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (February 25, 2016).\nThe Advent of social media: risk and opportunities. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (January 28, 2016).\nInformation security awareness. Workshop at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (September 25, 2015).\nEmerging threats in cybersecurity. Evening talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (August 25, 2015).\nSecure Kenya II: Cybersecurity and data governance in a growing economy. ISACA Kenya chapter annual conference at the Sarova Whitesands Beach Resort and Spa, Mombasa, Kenya (July 29 – 31, 2015).\nBusiness continuity management and disaster recovery. Breakfast talk at the Nairobi Safari Club by ISACA, Kenya chapter, Nairobi, Kenya (April 25, 2015).\nQuickBooks software and USAID accounting regulations and best practices. KCA University by AED CAP Kenya, Nairobi, Kenya (October 16- 17, 2008).\nChild protection training by Childline Kenya, Mwingi, Kenya (September 10-11, 2008).\nIdentification, prioritization and validation of community-based needs assessment for Nakuru district under the EU-DGSP II, Hotel Kunste by CEDGG- Endorois, Nakuru, Kenya (October 2006).\nValidation workshop for the EU-DGSP devolved funds’ survey– Nakuru District, Hotel Genevieve by KIPPRA- EU-DGSP/ CIDA project, Nakuru, Kenya (October 2006).\nField data collection. KIPPRA, Bishops Garden Tower, Nairobi, Kenya (April 2006)."
+  },
+  {
+    "objectID": "media/Fintech lending/index.html",
+    "href": "media/Fintech lending/index.html",
+    "title": "How Fintech Lending Could Push the Poor into a Debt Trap",
+    "section": "",
+    "text": "The article appears in The Business Daily, April 2, 2019. Follow the link below.\nhttps://www.businessdailyafrica.com/bd/opinion-analysis/ideas-debate/why-fintech-lending-could-push-the-poor-into-debt-trap-2244602"
+  },
+  {
+    "objectID": "media/Betting/index.html",
+    "href": "media/Betting/index.html",
+    "title": "Top prizes Kenya loses to unregulated sports betting",
+    "section": "",
+    "text": "The article appears in The Business Daily, February 20, 2019. Follow the link below.\nhttps://www.businessdailyafrica.com/bd/opinion-analysis/ideas-debate/top-prizes-kenya-loses-to-unregulated-sports-betting-2239614"
+  },
+  {
+    "objectID": "media/Academic Crisis/index.html",
+    "href": "media/Academic Crisis/index.html",
+    "title": "Kenya’s academic research nears a crisis",
+    "section": "",
+    "text": "The article appears in The Business Daily, April 24, 2018. Follow the link below.\nhttps://www.businessdailyafrica.com/bd/opinion-analysis/letters/letters-kenya-s-academic-research-nears-a-crisis-2199406"
+  },
+  {
+    "objectID": "media/Betting losses/index.html",
+    "href": "media/Betting losses/index.html",
+    "title": "Why high tax on betting won’t curb the practice",
+    "section": "",
+    "text": "The article appears in The Business Daily, June 27, 2019. Follow the link below.\nhttps://www.businessdailyafrica.com/bd/opinion-analysis/ideas-debate/why-high-tax-on-betting-won-t-curb-the-practice-2255416"
+  },
+  {
+    "objectID": "media/Impact investing/index.html",
+    "href": "media/Impact investing/index.html",
+    "title": "Looking Inwards: Impact Investing by Africans: The Case of Microfinance in Africa",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, July 26, 2021. Follow the link below.\nhttps://usbusinessinafricaawards.com/economics-trade-2/\n\nBackground\n\n\n\nImpact investing relates to the use of corporate principles to generate environmental, social and governance (ESG) gains over and above financial goals. Indeed, the involvement of private enterprises in solving social problems would complement the efforts of philanthropists and the state. The rise to prominence of hybrid organisations that balance doing social good and making money first developed around the idea of corporate social responsibility (CSR) (Billis and Rochester 2020). The critique of CSR was that it served as a a public relations exercise that delivered minimal social and environmental impact. To guard against the drawbacks of CSR, impact investing aims at generating quantifiable and sustainable ESG benefits. Specifically, impact investing seeks to increase the quality or quantity (or both) social outcomes beyond what would otherwise have occurred without the investment (Brest and Born 2013). Nonetheless, striking this balance is easier said than done. The concerns in the literature relating to impact investing revolve around assessing impact and whether or not it is possible to simultaneously achieve social impact and risk adjusted market-rate financial returns (Bugg-Levine and Emerson 2011).\nIn this article, I examine impact investing in Africa from the perspective of microfinance (MF). Specifically, I examine the opportunity for sourcing finance in Africa to supplement donations from the west and local state subsidies. MF has been the bedrock of financial inclusion in poor communities, especially with the success of the Grameen Bank in Bangladesh. Critically, most financial intermediaries do not avail financial services to the poor who are often dispersed in remote, rural areas, and often lack adequate collateral and credit history (Kodongo and Kendi 2013). Offering financial services to these financially excluded people is a clear case of impact investing as mainstream markets may not offer them these services 1.\nThe initial MF model mostly relied on donations and state subsidies, with major donors being USAID and the Ford Foundation. Microfinance institutions (MFIs) following this approach were mainly NGOs focused primarily of offering financial services to the financially excluded, with little regard for profitability and financial sustainability. Critics noted that this financing approach masked internal inefficiencies in MFIs and crowded out alternative, financially sustainable commercial providers of financial services (Kota 2007). The rise of neo-liberalism after the cold war led to a gradual shift in the financing model for MFIs. Increasingly, donors and governments have reduced their support for MFIs (see figure 1).\n\n\n\n\n\n\n\n\nHence, MFIs have to raise finance in mainstream capital markets, including deposits. By extension, this means that MFIs have to make ample financial returns to pay off debt, interest and dividends. To continue focusing on the social mission of reaching the financially excluded, MFIs have to turn to impact investors. Investors who are not keen on the social performance of MFIs are likely to push managers of MFIs to generate profits at the expense of the social mission, a decision that may threaten the legitimacy of MFIs. This financing model raises important questions that I address partially in this article. Are MFIs in Africa ready for the shift to the hybrid model where financial sustainability is as important as social outreach? Can the MF model based on commercial, profit-oriented principles still deliver on the social goals of reaching the financially excluded? Are there trade-offs between social outreach and the financial performance of MFIs that raise capital from commercial sources?\nMore critically, the model points to the over-reliance of MFIs in Africa on foreign donations. Several scholars have raised concerns over the inherent uncertainty of donations and aid. For instance, Garmaise and Natividad (2013) notes that the flow of donations has a positive link with the state of bilateral political relationship between the donor and the recipient countries. Armendáriz et al. (2013) further illustrates that uncertainty in donations and subsidies to microfinance can cause MFIs to abandon their social mission by focusing more on meeting their operating costs. Moreover, the flow of capital from the west to Africa has a positive relationship with economic health in the source country. For instance, the financial crisis that started in 2007 saw a drastic decline in donations and other sources of capital to MFIs from the West []. Which brings us to the next question. How can MFIs harness capital from Africans resident on the continent or the diaspora to drive the agenda of financial inclusion on the continent?\nThe issues I address in this article are important in light of SDGs and Africa Union (AU) Agenda 2063. SDG 1: Ending poverty in all its forms everywhere, aptly captures the essence of sustainable microfinance globally. One of the deliverables of SDG 1 has to do with access to resources, including financial resources (General Assembly 2015; African Union 2015).\n\nBy 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance.\n\nThe AU agenda 2063 has an even more explicit target relating to development in Africa.\n\nAfrica takes full responsibility for financing her development.\n\nFor Africa to take control of her destiny, then her people must take charge of financing enterprises in the continent. In this context, it is important that Africans take a lead in financing impact investments on the continent.\nIn the next section, I address the issue of potential trade-offs between the financial sustainability of MFIs and their social goals of reaching the financially excluded. Next, I examine the extent to which MFIs in Africa can harness finance from Africans within the continent and in the diaspora to finance their activities.\n\n\nHow Well Prepared are MFIs for the Shift to the Hybrid Model\nAs noted before, the shift from the social model to the hybrid model of microfinance took root with the rise of neo-liberalism after the cold war (Bateman 2010). Before then, the bulk of the capital was in the form of donations and state subsidies (D’Espallier et al. 2017). The new world order saw the emphasis on the financial sustainability of enterprises that manifested not only in microfinance but also at country level with the much criticized structural adjustment programs (SAPs). The accompanied reduction in donations to MFIs forced most of them to turn to capital markets for financing. In 1992, PRODEM, an NGO in Bolivia became the first MFI to fully convert to a commercial bank, BANCOSOL. Many other MFIs globally have since taken up the profit-oriented model, either as commercial banks, Non-Bank Financial Institutions (NBFIs), or rural banks (Hishigsuren 2006).\nThe percentage of female borrowers is a key proxy for measuring financial inclusion outcomes by financial intermediaries, as is the average loan balance per borrower. Because women bear the blunt of financial exclusion, MFIs that lend to relatively more women have better social performance outcomes (Espinosa-Vega et al. 2020). On the contrary, lower average loan balance per borrower corresponds to better social performance given that financially excluded people are likely to demand smaller loans. Figure 2 shows that the median social performance of MFIs in Africa has declined drastically.\n\n\n\n\n\nFigure 3 below shows the trends in financial sustainability and profit margin of MFIs. Financial sustainability captures the extent that an MFIs revenues cover the operating expense. Operational self-sufficiency (OSS) is the ratio of revenues to operating costs, a common proxy for financial sustainability, with a ratio at least one preferable. Profit margin is the ratio of profits to total revenues. A positive profit margin indicates profitability (Abeysekera, Oguzoglu, and Le 2014). The plots show that most MFIs are barely financially sustainable, although there is an upward trend in median OSS and profit margin. These results indicate that MFIs are gradually adjusting to the financial sustainability model. Faced with increased financial pressures, it appears that MFIs sacrifice their social mission for profits.\n\n\n\n\n\nThe circumstances surrounding the conversion point to poor preparedness by MFIs for the transition to the hybrid model. Bateman (2010) attributes the conversion to explicit pressure by donors on MFIs to adopt the hybrid model, meaning that MFIs had little room to adapt their business practices to suit the commercial model. That MFIs could bow to pressure from donors to alter their operating model at the risk of affecting their social mission shows the vulnerability of MFIs to foreign finance.\n\n\nLocal Capital for Local Microfinance\nThe MF industry draws its legitimacy chiefly from the ability to meet social goals. The prior discussion shows that MFIs may be sacrificing their social goals of reaching the financially excluded in favour of profits. While not advocating for a complete replacement of foreign capital, locally sourced funds would allow MFIs to focus on their social goals.\nThe key points from the discussion are as follows;\n\nThe flow of capital from the west to finance MFIs in Africa is constrained by the state of political relationships between countries.\nThe flow of capital from the west to finance MFIs in Africa is dependent on economic conditions in the countries of origin.\n\nMoreover, given that foreign investors may not be conversant with the investment environment in Africa, they may be reluctant to invest in MF in Africa, or may demand high returns to compensate for higher risk.\nOne of the major drawbacks regarding impact investing is the lack of adequate data and documentation to allow for the evaluation of the extent of the local impact investment funds. Much of what we know about impact investing relates to western capital that flows into Africa. For instance, the website https://thebigdeal.substack.com/ tracks the flow of start up funds from the West to Africa. In this regard, Africa seems a mere recipient of funds and not as a potential source of funds over and above what comes from the west. Also, the managers of projects funded using foreign capital may not have an understanding of local context to allow them tailor their projects to solve the most urgent and pressing needs. What is notable in this respect is that foreign capital flows predominantly to firms where the founders are western and specifically white. 2\n\n\nWay Forward\nThe issues I have raised in the discussion so far point to the need for Africa to source local resources to fund development beyond official development assistance from the West. Already, this is happening with the realization of the importance of remittances for development. Africa is vast and heterogeneous and has always had a weak data infrastructure. This means that impact investing within the continent is hardly documented. Instead, much of the literature, understandably captures the flow of impact investment from the west. The onus is on the generation of local data and research output that allows for the mobilization of local resources to solve local problems.\n\n\n\n\n\n\n\n\n\nReferences\n\nAbeysekera, Sarath, Umut Oguzoglu, and Thanh Tam Le. 2014. “Sustainability and Mission Drift: Do Microfinance Institutions in Vietnam Reach the Poor?” In Microfinance Institutions, 99–118. Springer.\n\n\nAfrican Union. 2015. “Agenda2063 Report of the Commission on the African Union Agenda 2063 the Africa We Want in 2063.”\n\n\nArmendáriz, Beatriz, Bert D’Espallier, Marek Hudon, and Ariane Szafarz. 2013. “Subsidy Uncertainty and Microfinance Mission Drift.” Available at SSRN 1731265.\n\n\nBateman, Milford. 2010. Why Doesn’t Microfinance Work?: The Destructive Rise of Local Neoliberalism. Zed Books Ltd.\n\n\nBillis, David, and Colin Rochester. 2020. Handbook on Hybrid Organisations. Edward Elgar Publishing.\n\n\nBrest, Paul, and Kelly Born. 2013. “When Can Impact Investing Create Real Impact.” Stanford Social Innovation Review 11 (4): 22–31.\n\n\nBugg-Levine, Antony, and Jed Emerson. 2011. “Impact Investing: Transforming How We Make Money While Making a Difference.” Innovations: Technology, Governance, Globalization 6 (3): 9–18.\n\n\nD’Espallier, Bert, Jann Goedecke, Marek Hudon, and Roy Mersland. 2017. “From NGOs to Banks: Does Institutional Transformation Alter the Business Model of Microfinance Institutions?” World Development 89: 19–33.\n\n\nEspinosa-Vega, Marco A, Ms Kazuko Shirono, Mr Hector Carcel Villanova, MissEsha Chhabra, Ms Bidisha Das, and Ms Yingjie Fan. 2020. Measuring Financial Access: 10 Years of the IMF Financial Access Survey. International Monetary Fund.\n\n\nGarmaise, Mark J, and Gabriel Natividad. 2013. “Cheap Credit, Lending Operations, and International Politics: The Case of Global Microfinance.” The Journal of Finance 68 (4): 1551–76.\n\n\nGeneral Assembly. 2015. “Sustainable Development Goals.” SDGs Transform Our World 2030.\n\n\nHishigsuren, Gaamaa. 2006. “Transformation of Micro-Finance Operations from NGO to Regulated MFI.” IDEAS, USA.\n\n\nKodongo, Odongo, and Lilian G Kendi. 2013. “Individual Lending Versus Group Lending: An Evaluation with Kenya’s Microfinance Data.” Review of Development Finance 3 (2): 99–108.\n\n\nKota, Ina. 2007. “Microfinance: Banking for the Poor.” Finance and Development 44 (2): 44.\n\nFootnotes\n\n\nThe accessibility and use of financial services has changed with the rise of Fintech, especially mobile money. Commercial banks and other financial intermediaries can now reach people in remote locations without setting up physical branches. Still, a significant proportion of people are unable to use these services due to the aforementioned constraints.↩︎\nSee full article at https://restofworld.org/2021/kenya-hasnt-figured-out-how-to-put-its-local-founders-first/.↩︎"
+  },
+  {
+    "objectID": "media/ICT and Agriculture/index.html",
+    "href": "media/ICT and Agriculture/index.html",
+    "title": "Information and communication technology as a pathway to enhancing the involvement of youth and women in agriculture",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, March 28, 2022. Follow the link below.\nhttps://africa-usforum.africa/information-and-communication-technology-as-a-pathway-to-enhancing-the-involvement-of-youth-and-women-in-agriculture/"
+  },
+  {
+    "objectID": "media/youth digital economy/index.html",
+    "href": "media/youth digital economy/index.html",
+    "title": "Youth and the digital economy in Africa",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, July 31, 2020. Follow the link below.\nhttps://www.africaportal.org/features/youth-and-digital-economy-africa/"
+  },
+  {
+    "objectID": "media/University Education Quality/index.html",
+    "href": "media/University Education Quality/index.html",
+    "title": "How to improve the quality of Kenya’s varsities",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, August 3, 2019. Follow the link below.\nhttps://nation.africa/kenya/blogs-opinion/opinion/how-to-improve-the-quality-of-kenya-s-varsities-191772"
+  },
+  {
+    "objectID": "media/Value chains, Women and Youth in Africa Agriculture/index.html",
+    "href": "media/Value chains, Women and Youth in Africa Agriculture/index.html",
+    "title": "Addressing value Chains and policies to enhance youth and women in African agriculture",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, March 28, 2022. Follow the link below.\nhttps://africa-usforum.africa/addressing-value-chains-and-policies-to-enhance-youth-and-women-in-african-agriculture/"
+  },
+  {
+    "objectID": "media/Women and Youth in Africa Agriculture/index.html",
+    "href": "media/Women and Youth in Africa Agriculture/index.html",
+    "title": "Encouraging Women and Youth Participation in Africa’s Agriculture",
+    "section": "",
+    "text": "The article appears in The WITS ACSUS website, March 28, 2022. Follow the link below.\nhttps://africa-usforum.africa/encouraging-women-and-youth-participation-in-africas-agriculture-scale-land-ownership-and-market-failures/"
+  },
+  {
+    "objectID": "media/Neglect academic research/index.html",
+    "href": "media/Neglect academic research/index.html",
+    "title": "Neglect of academic research spells doom for innovation",
+    "section": "",
+    "text": "The article appears in The Nation Media Group, April 27, 2019. Follow the link below.\nhttps://nation.africa/oped/opinion/Neglect-of-academic-research-spells-doom-for-innovation/440808-4533758-vxfd3nz/index.html"
+  },
+  {
+    "objectID": "certifications/index.html",
+    "href": "certifications/index.html",
+    "title": "Professional Certificate in Data Science",
+    "section": "",
+    "text": "The Professional Certificate in Data Science comprises of 9 courses that impart skills in R, Statistics, and the basics of machine learning. The nine courses are:\n\nData Science: R Basics\nData Science: Visualization\nData Science: Probability\nData Science: Inference and Modeling\nData Science: Productivity Tools\nData Science: Wrangling\nData Science: Linear Regression\nData Science: Machine Learning\nData Science: Capstone\n\nThe URL for the course website is https://www.edx.org/professional-certificate/harvardx-data-science"
+  },
+  {
+    "objectID": "certifications/Data Science Professional Certificate/index.html",
+    "href": "certifications/Data Science Professional Certificate/index.html",
+    "title": "Professional Certificate in Data Science",
+    "section": "",
+    "text": "The Professional Certificate in Data Science , offered by Harvard University on EdX comprises of 9 courses that impart skills in R, Statistics, and the basics of machine learning. The nine courses are:\n\nData Science: R Basics\nData Science: Visualization\nData Science: Probability\nData Science: Inference and Modeling\nData Science: Productivity Tools\nData Science: Wrangling\nData Science: Linear Regression\nData Science: Machine Learning\nData Science: Capstone\n\nMy final certificate is available on this [link](https://credentials.edx.org/credentials/6f9f9fb5eee84a4c9ba3d62f4ded231b/) https://credentials.edx.org/credentials/6f9f9fb5eee84a4c9ba3d62f4ded231b/\nThe URL for the course website is https://www.edx.org/professional-certificate/harvardx-data-science"
+  },
+  {
+    "objectID": "certifications/The Analytics Edge/index.html",
+    "href": "certifications/The Analytics Edge/index.html",
+    "title": "The Analytics Edge",
+    "section": "",
+    "text": "The Analytics Edge is a project based course offered by the Massachusetts Institute of Technology (MIT) on EdX that impart skills in R, Statistics, and the basics of machine learning. The nine courses are:\n\nData Science: R Basics\nData Science: Visualization\nData Science: Probability\nData Science: Inference and Modeling\nData Science: Productivity Tools\nData Science: Wrangling\nData Science: Linear Regression\nData Science: Machine Learning\nData Science: Capstone\n\nMy final certificate is available on this link https://courses.edx.org/certificates/0348a316d7e34fa3be5541880f47e005\nThe URL for the course website is https://www.edx.org/professional-certificate/harvardx-data-science"
+  },
+  {
+    "objectID": "certifications/tableau/index.html",
+    "href": "certifications/tableau/index.html",
+    "title": "Data Visualization in Tableau",
+    "section": "",
+    "text": "The Tableau certification course offered by the University of California, Davis on Coursera that impart skills in data visualization using Tableau. The certification comprises of 5 courses as follows:\n\nFundamentals of Visualization with Tableau.\nEssential Design Principles for Tableau.\nVisual Analytics with Tableau.\nCreating Dashboards and Storytelling with Tableau.\nData Visualization with Tableau Project.\n\nMy final certificate is available on this link https://www.coursera.org/account/accomplishments/verify/CA9P6ZDETNJH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course\nThe URL for the course website is https://www.coursera.org/specializations/data-visualization?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+  },
+  {
+    "objectID": "certifications/Data Scientist R/index.html",
+    "href": "certifications/Data Scientist R/index.html",
+    "title": "Data Scientist with R",
+    "section": "",
+    "text": "The Data Scientist with R stream comprises of 28 courses over 88 hours that impart skills in R, Statistics, and the basics of machine learning.\nMy final certificate is available on this [link](https://www.datacamp.com/statement-of-accomplishment/track/8316f56bc9e6065aad2e2ebe056ad179f4b0baf1) https://www.datacamp.com/statement-of-accomplishment/track/8316f56bc9e6065aad2e2ebe056ad179f4b0baf1\nThe URL for the course website is https://www.datacamp.com/tracks/data-scientist-with-r"
+  },
+  {
+    "objectID": "certifications/linux/index.html",
+    "href": "certifications/linux/index.html",
+    "title": "The Linux Command Line Bootcamp: Beginner To Power User",
+    "section": "",
+    "text": "The course covers advanced Linux Bash concepts.\nMy final certificate is available on this link https://www.udemy.com/certificate/UC-d320ae76-187b-4bb2-b6b3-fe5ccec5aab1/\nThe URL for the course website is https://www.udemy.com/course/the-linux-command-line-bootcamp/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Linux_v.PROF_la.EN_cc.ROW_ti.6540&utm_content=deal4584&utm_term=_._ag_85479007354_._ad_535397281368_._kw__._de_c_._dm__._pl__._ti_dsa-774930029929_._li_9070344_._pd__._&matchtype=&gclid=CjwKCAiArNOeBhAHEiwAze_nKEvgmnHBcNRrbAnae5KG8YWJuXv6xN6v3liA-kqrdLOt__oPa5xM0RoCA_AQAvD_BwE"
+  },
+  {
+    "objectID": "certifications/reproducible_research/index.html",
+    "href": "certifications/reproducible_research/index.html",
+    "title": "Reproducible Templates for Analysis and Dissemination",
+    "section": "",
+    "text": "The course covers concepts in reproducible research using R and R Markdown.\nMy final certificate is available on this link https://www.coursera.org/account/accomplishments/certificate/HHFHASQ2XKZS\nThe URL for the course website is https://www.coursera.org/learn/reproducible-templates-analysis"
+  },
+  {
+    "objectID": "certifications/Big Data/index.html",
+    "href": "certifications/Big Data/index.html",
+    "title": "Introduction to Big Data",
+    "section": "",
+    "text": "The course introduces big data and the technologies for big data processing including Hadoop, Cloudera, and HDFS.\nMy final certificate is available on this link https://www.coursera.org/account/accomplishments/certificate/CFSZW9N8GG3H\nThe URL for the course website is https://www.coursera.org/learn/big-data-introduction"
+  },
+  {
+    "objectID": "certifications/CPA/index.html",
+    "href": "certifications/CPA/index.html",
+    "title": "Certified Public Accountant of Kenya",
+    "section": "",
+    "text": "The Certified Public Accountant of Kenya (CPA) examinations are administered by KASNEB. The examinations cover the following areas.\n\nFinancial Reporting.\nManagement Accounting.\nTaxation.\nAuditing.\nFinancial Management and Analysis.\n\nThe details are available on this site https://www.ifac.org/about-ifac/membership/members/institute-certified-public-accountants-kenya"
+  },
+  {
+    "objectID": "certifications/CISA/index.html",
+    "href": "certifications/CISA/index.html",
+    "title": "Certified Information Systems Auditor",
+    "section": "",
+    "text": "The Certified Information Systems Auditor (CISA) examinations are administered by ISACA.\nMy final certificate is available on this link https://www.credly.com/badges/0820daf1-917a-42d1-ba83-d1a3c3ed39f6\nThe URL for the course website is https://www.isaca.org/"
+  },
+  {
+    "objectID": "certifications/Data Analyst R/index.html",
+    "href": "certifications/Data Analyst R/index.html",
+    "title": "Data Analyst with R",
+    "section": "",
+    "text": "The Data Scientist with R stream comprises of 10 courses over 40 hours that impart skills in R, Statistics, and the Data analysis.\nMy final certificate is available on this link https://www.datacamp.com/statement-of-accomplishment/track/8c23eb3929e63fb2c53d3f0fbebc95b04dfb5400\nThe URL for the course website is https://www.datacamp.com/tracks/data-analyst-with-r"
+  },
+  {
+    "objectID": "projects/welcome/index.html",
+    "href": "projects/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "projects/Motor vehicle Fuel Consumption/index.html",
+    "href": "projects/Motor vehicle Fuel Consumption/index.html",
+    "title": "Analyzing Motor Vehicle Fuel Consumption using R",
+    "section": "",
+    "text": "This post is a visualization of motor vehicle fuel consumption using R and ggplot2. The analysis shows that Japanese vehicles have significantly lower fuel consumption. Is this the reason Japanese cars rule the roads all over the world?\nI start by loading the packages required for the analysis.\n\nif (!require(pacman)) {\n        install.packages(\"pacman\")\n        library(pacman)\n}\n\nLoading required package: pacman\n\npacman::p_load(tidyverse, Amelia)\n\nNext, I lad and examine the data for missing values.\n\ndata(\"mpg\")\n\n## Glimpse the data ----\nglimpse(mpg)\n\nRows: 234\nColumns: 11\n$ manufacturer <chr> \"audi\", \"audi\", \"audi\", \"audi\", \"audi\", \"audi\", \"audi\", \"…\n$ model        <chr> \"a4\", \"a4\", \"a4\", \"a4\", \"a4\", \"a4\", \"a4\", \"a4 quattro\", \"…\n$ displ        <dbl> 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2.…\n$ year         <int> 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 200…\n$ cyl          <int> 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, …\n$ trans        <chr> \"auto(l5)\", \"manual(m5)\", \"manual(m6)\", \"auto(av)\", \"auto…\n$ drv          <chr> \"f\", \"f\", \"f\", \"f\", \"f\", \"f\", \"f\", \"4\", \"4\", \"4\", \"4\", \"4…\n$ cty          <int> 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, 1…\n$ hwy          <int> 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, 2…\n$ fl           <chr> \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p\", \"p…\n$ class        <chr> \"compact\", \"compact\", \"compact\", \"compact\", \"compact\", \"c…\n\n## Missing data\nAmelia::missmap(mpg)\n\nWarning: Unknown or uninitialised column: `arguments`.\nUnknown or uninitialised column: `arguments`.\n\n\nWarning: Unknown or uninitialised column: `imputations`.\n\n\n\n\n\nIn this section, I check the correlation between highway fuel consumption vs city fuel consumption. It turns out that there is a high correlation. Thus, there is no trade-off. No vehicle that consumes more in the highway will consume less in the city.\n\n## There is high correlation between highway and city fuel consumption. Again, vehicles with more cylinders generally consume more fuel per mile/ kilometer.\n\nmpg %>% ggplot(mapping = aes(\n        x = cty, y = hwy,\n        size = cyl, color = manufacturer\n)) +\n        geom_point() +\n        theme_classic() +\n        theme(axis.line = element_blank()) + \n    labs(x = \"City\", y = \"Highway\",\n         title = \"Correlation Between City and Highway Fuel Consuption by Vehicle Model\",\n         subtitle = \"There is a high correlation between city and highway fuel consumption.\")\n\n\n\n\nFinally, I visualize the fuel economy of the cars by manufacturer. It is clear from the visual that cars made in Japan are more fuel efficient.\n\n## Japanese cars are very fuel efficient. \nmpg %>%\n        ggplot(mapping = aes(\n                x = fct_reorder(manufacturer, cty, median),\n                y = cty\n        )) +\n        geom_boxplot(aes(fill = manufacturer %in% c(\"toyota\", \"nissan\", \"subaru\", \"honda\")),\n                show.legend = FALSE\n        ) +\n        geom_point(shape = \".\") +\n        artyfarty::theme_ft() +\n        theme(axis.line = element_blank()\n              ) +\n        labs(\n                x = NULL, y = NULL, \n                title = \"City Fuel Consumption by Vehicle Make\",\n                subtitle = \"Cars made in Japan are More Fuel Efficient\"\n        ) +\n        scale_fill_manual(values = c(\"gray 80\", \"black\"))"
+  },
+  {
+    "objectID": "projects/internet_europe/index.html",
+    "href": "projects/internet_europe/index.html",
+    "title": "Visualizing Internet Speed in Europe",
+    "section": "",
+    "text": "This post is a visualization of internet speed in Europe using R and ggplot2. I start by loading the packages and then read the data. This analysis is a replication of a visualization in Tableau available in my Tableau public profile on the link https://public.tableau.com/app/profile/john.karuitha/viz/InternetSpeedinEurope2022/Dashboard1.\n\n## Load required packages ----\nif (!require(pacman)) {\n        install.packages(\"pacman\")\n}\n\nLoading required package: pacman\n\npacman::p_load(\n        tidyverse, tidymodels, ggthemes, janitor,\n        rvest, countrycode, readxl, maps, mapproj\n)\n\n## load data ----\neuropenet <- read_xlsx(\"Average Internet Speeds Across Europe.xlsx\") %>%\n        clean_names() %>%\n        mutate(country_en = countrycode(\n                sourcevar = country,\n                origin = \"iso2c\",\n                destination = \"country.name\"\n        )) %>%\n        relocate(country_en, .after = country) %>%\n        mutate(country_en = case_when(\n                country == \"EL\" ~ \"Greece\",\n                country == \"BIH\" ~ \"Bosnia and Herzegovina\",\n                country == \"MDA\" ~ \"Moldova\",\n                country == \"UK\" ~ \"United Kingdom\",\n                country == \"XKO\" ~ \"Kosovo\",\n                TRUE ~ country_en\n        ))\n\nWarning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: BIH, EL, MDA, UK, XKO\n\nfull_data <- map_data(\"world\") %>%\n        inner_join(europenet, by = c(\"region\" = \"country_en\"))\n\nNext, I create the map. Countries with higher internet speeds have a darker green hue.\n\n## Create a base map ----\nfull_data %>%\n        ggplot(aes(\n                x = long, y = lat, map_id = region,\n                fill = average_download_speed\n        )) +\n        geom_map(\n                map = full_data,\n                color = \"gray80\",\n                linewidth = 0.2\n        ) +\n        labs(x = \"\", y = \"\", title = \"Average Internet Download Speeds\") +\n        coord_map(\"ortho\", orientation = c(55, 16, 0)) +\n        theme_minimal() +\n        theme(\n                legend.title = element_blank(),\n                legend.position = \"bottom\",\n                legend.text = element_text(size = 5, face = \"italic\"),\n                axis.text = element_blank()\n        ) +\n        scale_fill_gradient_tableau(palette = \"Blue-Green Sequential\")"
+  },
+  {
+    "objectID": "projects/post-with-code/index.html",
+    "href": "projects/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "projects/internet_europe_tableau/index.html",
+    "href": "projects/internet_europe_tableau/index.html",
+    "title": "Visualizing Internet Speed in Europe Using Tableau",
+    "section": "",
+    "text": "This analysis is available in my Tableau public profile on the link <shorturl.at/nHQ06>."
+  }
+]

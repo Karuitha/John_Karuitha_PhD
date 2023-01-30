@@ -1,0 +1,21 @@
+---
+title: "Certified Public Accountant of Kenya"
+author: "John Karuitha"
+date: "January 27, 2015"
+categories: [Accounting, Accountancy, Finance, Financial Management, Auditing, Taxation]
+image: "image.jpg"
+---
+
+The Certified Public Accountant of Kenya (CPA) examinations are administered by KASNEB. The examinations cover the following areas.
+
+-   Financial Reporting.
+
+-   Management Accounting.
+
+-   Taxation.
+
+-   Auditing.
+
+-   Financial Management and Analysis.
+
+The details are available on this [site](https://www.ifac.org/about-ifac/membership/members/institute-certified-public-accountants-kenya) <https://www.ifac.org/about-ifac/membership/members/institute-certified-public-accountants-kenya>

@@ -1,0 +1,9 @@
+---
+title: "Visualizing Internet Speed in Europe Using Tableau"
+author: "John Karuitha"
+date: "2022-11-27"
+categories: [code, analysis, Tableau]
+image: "internet.png"
+---
+
+This analysis is available in my [Tableau public profile](shorturl.at/nHQ06) on the link <shorturl.at/nHQ06>.

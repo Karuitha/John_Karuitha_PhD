@@ -1,0 +1,13 @@
+---
+title: "Reproducible Templates for Analysis and Dissemination"
+author: "John Karuitha"
+date: "04-06-2021"
+categories: [R, R Markdown, Research, Reproducible]
+image: "image.jpg"
+---
+
+The course covers concepts in reproducible research using R and R Markdown.
+
+My final certificate is available on this [link](https://www.coursera.org/account/accomplishments/certificate/HHFHASQ2XKZS) <https://www.coursera.org/account/accomplishments/certificate/HHFHASQ2XKZS>
+
+The URL for the course website is <https://www.coursera.org/learn/reproducible-templates-analysis>

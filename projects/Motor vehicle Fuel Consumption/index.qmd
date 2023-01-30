@@ -1,0 +1,78 @@
+---
+title: "Analyzing Motor Vehicle Fuel Consumption using R"
+author: "John Karuitha"
+date: "2023-01-27"
+categories: [R, code, analysis]
+image: "fuel.png"
+---
+
+This post is a visualization of motor vehicle fuel consumption using R and ggplot2. The analysis shows that Japanese vehicles have significantly lower fuel consumption. Is this the reason Japanese cars rule the roads all over the world?
+
+I start by loading the packages required for the analysis. 
+
+```{r}
+if (!require(pacman)) {
+        install.packages("pacman")
+        library(pacman)
+}
+
+pacman::p_load(tidyverse, Amelia)
+
+```
+
+Next, I lad and examine the data for missing values.
+
+```{r}
+
+data("mpg")
+
+## Glimpse the data ----
+glimpse(mpg)
+
+## Missing data
+Amelia::missmap(mpg)
+```
+
+In this section, I check the correlation between highway fuel consumption vs city fuel consumption. It turns out that there is a high correlation. Thus, there is no trade-off. No vehicle that consumes more in the highway will consume less in the city. 
+
+```{r}
+## There is high correlation between highway and city fuel consumption. Again, vehicles with more cylinders generally consume more fuel per mile/ kilometer.
+
+mpg %>% ggplot(mapping = aes(
+        x = cty, y = hwy,
+        size = cyl, color = manufacturer
+)) +
+        geom_point() +
+        theme_classic() +
+        theme(axis.line = element_blank()) + 
+    labs(x = "City", y = "Highway",
+         title = "Correlation Between City and Highway Fuel Consuption by Vehicle Model",
+         subtitle = "There is a high correlation between city and highway fuel consumption.")
+
+
+```
+
+Finally, I visualize the fuel economy of the cars by manufacturer. It is clear from the visual that cars made in Japan are more fuel efficient. 
+
+```{r}
+## Japanese cars are very fuel efficient. 
+mpg %>%
+        ggplot(mapping = aes(
+                x = fct_reorder(manufacturer, cty, median),
+                y = cty
+        )) +
+        geom_boxplot(aes(fill = manufacturer %in% c("toyota", "nissan", "subaru", "honda")),
+                show.legend = FALSE
+        ) +
+        geom_point(shape = ".") +
+        artyfarty::theme_ft() +
+        theme(axis.line = element_blank()
+              ) +
+        labs(
+                x = NULL, y = NULL, 
+                title = "City Fuel Consumption by Vehicle Make",
+                subtitle = "Cars made in Japan are More Fuel Efficient"
+        ) +
+        scale_fill_manual(values = c("gray 80", "black")) 
+
+```

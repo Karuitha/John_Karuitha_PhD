@@ -1,0 +1,13 @@
+---
+title: "Data Scientist with R"
+author: "John Karuitha"
+date: "January 26, 2023"
+categories: [R, Statistics, analysis, Data Science]
+image: "image.jpg"
+---
+
+The Data Scientist with R stream comprises of 28 courses over 88 hours that impart skills in R, Statistics, and the basics of machine learning.
+
+My final certificate is available on this \[link\](https://www.datacamp.com/statement-of-accomplishment/track/8316f56bc9e6065aad2e2ebe056ad179f4b0baf1) <https://www.datacamp.com/statement-of-accomplishment/track/8316f56bc9e6065aad2e2ebe056ad179f4b0baf1>
+
+The URL for the course website is <https://www.datacamp.com/tracks/data-scientist-with-r>

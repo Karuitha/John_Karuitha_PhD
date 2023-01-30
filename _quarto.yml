@@ -1,0 +1,39 @@
+project:
+  type: website
+
+website:
+  title: "John Karuitha, PhD"
+  navbar:
+    background: dark
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Projects
+        href: projects.qmd
+      - text: Research
+        href: research.qmd
+      - text: Media
+        href: media.qmd
+      - text: Workshops and Conferences
+        href: workshops.qmd
+      - text: Certifications
+        href: certifications.qmd
+      - text: Resume
+        href: resume.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Karuitha
+      - icon: twitter
+        href: https://twitter.com/kingzz2005
+      - icon: linkedin
+        href: www.linkedin.com/in/Karuitha
+format:
+  html:
+    theme: 
+        dark: darkly
+        light: cerulean
+    css: styles.css
+
+editor: visual
+

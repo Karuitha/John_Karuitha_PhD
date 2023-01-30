@@ -1,0 +1,13 @@
+---
+title: "Certified Information Systems Auditor"
+author: "John Karuitha"
+date: "27-10-2015"
+categories: [ICT, IT, Auditing, IT Auditing]
+image: "image.jpg"
+---
+
+The [Certified Information Systems Auditor (CISA)](https://www.isaca.org/credentialing/certifications) examinations are administered by ISACA.
+
+My final certificate is available on this [link](https://www.credly.com/badges/0820daf1-917a-42d1-ba83-d1a3c3ed39f6) <https://www.credly.com/badges/0820daf1-917a-42d1-ba83-d1a3c3ed39f6>
+
+The URL for the course website is <https://www.isaca.org/>

@@ -1,0 +1,13 @@
+---
+title: "The Linux Command Line Bootcamp: Beginner To Power User"
+author: "John Karuitha"
+date: "04-10-2021"
+categories: [Linux, Bash, Bash Scripting]
+image: "image.jpg"
+---
+
+The course covers advanced Linux Bash concepts.
+
+My final certificate is available on this [link](https://www.udemy.com/certificate/UC-d320ae76-187b-4bb2-b6b3-fe5ccec5aab1/) <https://www.udemy.com/certificate/UC-d320ae76-187b-4bb2-b6b3-fe5ccec5aab1/>
+
+The URL for the course website is <https://www.udemy.com/course/the-linux-command-line-bootcamp/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Linux_v.PROF_la.EN_cc.ROW_ti.6540&utm_content=deal4584&utm_term=_._ag_85479007354_._ad_535397281368_._kw__._de_c_._dm__._pl__._ti_dsa-774930029929_._li_9070344_._pd__._&matchtype=&gclid=CjwKCAiArNOeBhAHEiwAze_nKEvgmnHBcNRrbAnae5KG8YWJuXv6xN6v3liA-kqrdLOt__oPa5xM0RoCA_AQAvD_BwE>

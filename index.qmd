@@ -1,0 +1,34 @@
+---
+title: "Professional Summary"
+image: karuitha.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/kingzz2005
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/Karuitha
+    - icon: github
+      text: Github
+      href: https://github.com/Karuitha
+    - icon: bootstrap-reboot
+      text: Rpubs Data Science Portfolio
+      href: https://rpubs.com/Karuitha
+    - icon: envelope
+      text: Contact me
+      href: diakingathia2005@gmail.com
+---
+
+Finance and research professional passionate about applying data analytics and machine learning to Business, Economics and Finance. Currently, I teach finance and accounting at [Karatina University](https://karu.ac.ke/)\
+
+I enjoy coding, teaching, research and data analytics.\
+\
+Proficient in Ms Excel, R, Python, MySQL, PostgreSQL, Teradata, SQL Server, Git and GitHub, and Tableau.
+
+Working knowledge of Bash, Docker, Stata and E-views.
+
+I hold a PhD in Financial Economics from University of the Witwatersrand, Johannesburg, South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).
+
+In my free time I swim, travel, watch documentaries and listen to music.

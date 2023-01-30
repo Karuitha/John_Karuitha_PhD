@@ -1,0 +1,11 @@
+---
+title: "Kenya’s academic research nears a crisis"
+author: "John Karuitha, Bob Wekesa"
+date: "2018-04-24"
+categories: [news, academia, analysis, research]
+image: "image.jpg"
+---
+
+The article appears in The Business Daily, April 24, 2018. Follow the link below.
+
+<https://www.businessdailyafrica.com/bd/opinion-analysis/letters/letters-kenya-s-academic-research-nears-a-crisis-2199406>

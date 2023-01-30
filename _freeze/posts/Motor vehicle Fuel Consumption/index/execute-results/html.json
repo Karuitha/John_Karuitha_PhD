@@ -1,0 +1,16 @@
+{
+  "hash": "2aae23bd8c039bd882e9f24a399837ef",
+  "result": {
+    "markdown": "---\ntitle: \"Analyzing Motor Vehicle Fuel Consumption using R\"\nauthor: \"John Karuitha\"\ndate: \"2023-01-27\"\ncategories: [R, code, analysis]\nimage: \"fuel.png\"\n---\n\n\nThis post is a visualization of motor vehicle fuel consumption using R and ggplot2. The analysis shows that Japanese vehicles have significantly lower fuel consumption. Is this the reason Japanese cars rule the roads all over the world?\n\n\n::: {.cell}\n\n```{.r .cell-code}\nif (!require(pacman)) {\n        install.packages(\"pacman\")\n        library(pacman)\n}\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: pacman\n```\n:::\n\n```{.r .cell-code}\npacman::p_load(tidyverse)\n\n\ndata(\"mpg\")\n#head(mpg)\n\n## There is high correlation between highway and city fuel consumption. Again, vehicles with more cylinders generally consume more fuel per mile/ kilometer.\n\nmpg %>% ggplot(mapping = aes(\n        x = cty, y = hwy,\n        size = cyl, color = manufacturer\n)) +\n        geom_point() +\n        theme_classic() +\n        theme(axis.line = element_blank()) + \n    labs(x = \"City\", y = \"Highway\",\n         title = \"Correlation Between City and Highway Fuel Consuption by Vehicle Model\",\n         subtitle = \"There is a high correlation between city and highway fuel consumption.\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n\n```{.r .cell-code}\n## Japanese cars are very fuel efficient. \nmpg %>%\n        ggplot(mapping = aes(\n                x = fct_reorder(manufacturer, cty, median),\n                y = cty\n        )) +\n        geom_boxplot(aes(fill = manufacturer %in% c(\"toyota\", \"nissan\", \"subaru\", \"honda\")),\n                show.legend = FALSE\n        ) +\n        geom_point(shape = \".\") +\n        artyfarty::theme_ft() +\n        theme(axis.line = element_blank()\n              ) +\n        labs(\n                x = NULL, y = NULL, \n                title = \"City Fuel Consumption by Vehicle Make\",\n                subtitle = \"Cars made in Japan are More Fuel Efficient\"\n        ) +\n        scale_fill_manual(values = c(\"gray 80\", \"black\")) \n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-2.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

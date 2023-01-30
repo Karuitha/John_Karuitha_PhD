@@ -1,0 +1,23 @@
+---
+title: "Professional Certificate in Data Science"
+author: "John Karuitha"
+date: today
+categories: [R, Statistics, analysis, Data Science, Git, Github, Machine Learning]
+image: "image.jpg"
+---
+
+The [Professional Certificate in Data Science](https://www.edx.org/professional-certificate/harvardx-data-science) , offered by Harvard University on EdX comprises of 9 courses that impart skills in R, Statistics, and the basics of machine learning. The nine courses are:
+
+-   Data Science: R Basics
+-   Data Science: Visualization
+-   Data Science: Probability
+-   Data Science: Inference and Modeling
+-   Data Science: Productivity Tools
+-   Data Science: Wrangling
+-   Data Science: Linear Regression
+-   Data Science: Machine Learning
+-   Data Science: Capstone
+
+My final certificate is available on this \[link\](https://credentials.edx.org/credentials/6f9f9fb5eee84a4c9ba3d62f4ded231b/) <https://credentials.edx.org/credentials/6f9f9fb5eee84a4c9ba3d62f4ded231b/>
+
+The URL for the course website is <https://www.edx.org/professional-certificate/harvardx-data-science>
