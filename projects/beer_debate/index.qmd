@@ -1,0 +1,12 @@
+---
+title: " Beer Debate"
+author: "John Karuitha"
+date: 2022-02-27
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+Drinkers like their beer cold. However, as is the case with all alcoholic drinks, beer is as controversial as loved. According to some estimates, global beer consumption stands at 200 million kilolitres and growing. Without a doubt, brewing beer is a significant economic activity. However, detractors argue that alcohol addiction wrecks individuals and families, leading to death. But people continue to drink regardless.
+
+In this article, I use data from beer advocate on the ratings of beers (by the beer lovers, of course). I supplement this data with beer consumption data from Wikipedia.
+ The [link](https://rpubs.com/Karuitha/beer_debate_one) to the project is <https:// https://rpubs.com/Karuitha/beer_debate_one>

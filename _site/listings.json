@@ -9,11 +9,31 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/welcome/index.html",
       "/projects/Motor vehicle Fuel Consumption/index.html",
       "/projects/internet_europe/index.html",
-      "/projects/post-with-code/index.html",
-      "/projects/welcome/index.html",
-      "/projects/internet_europe_tableau/index.html"
+      "/projects/beauty_products/index.html",
+      "/projects/internet_europe_tableau/index.html",
+      "/projects/systematic_risk/index.html",
+      "/projects/plasma_ferritin/index.html",
+      "/projects/being_geographer/index.html",
+      "/projects/world_happiness/index.html",
+      "/projects/body fat_determinants/index.html",
+      "/projects/weight_sleep patterns/index.html",
+      "/projects/sentiment_analysis/index.html",
+      "/projects/functional_programming/index.html",
+      "/projects/YouTube_dataset/index.html",
+      "/projects/beer_debate/index.html",
+      "/projects/murder_rates/index.html",
+      "/projects/delayed_flights/index.html",
+      "/projects/extracting_data/index.html",
+      "/projects/financial_services/index.html",
+      "/projects/Metres_Men’s/index.html",
+      "/projects/accidents_reduction/index.html",
+      "/projects/data_gathering/index.html",
+      "/projects/tidymodels/index.html",
+      "/projects/cars_dataset/index.html",
+      "/projects/post-with-code/index.html"
     ]
   },
   {

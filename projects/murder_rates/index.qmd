@@ -1,0 +1,11 @@
+---
+title: "Murder Rates by Country"
+author: "John Karuitha"
+date: "­2022-02-27"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this project, I visualise murder rates globally. 
+
+The [link](https://rpubs.com/Karuitha/homicides) to the project is <https://rpubs.com/Karuitha/homicides>

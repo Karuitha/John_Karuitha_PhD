@@ -1,12 +1,14 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2023-01-24"
+author: "John Karuitha"
+date: today
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Hello and welcome to my blog. I enjoy coding and programming.
+
+Lets connect and build data projects.
 
 ![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+

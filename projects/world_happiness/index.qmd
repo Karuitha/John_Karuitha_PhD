@@ -1,0 +1,10 @@
+---
+title: "Visualizing World Happiness in 4 Charts"
+author: "John Karuitha"
+date: "2022-09-01"
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+In this flex dashboard, I use 4 charts to visualize world happiness in. 2021.
+The [link](https://rpubs.com/Karuitha/Happiness) to the project is <https://rpubs.com/Karuitha/Happiness>

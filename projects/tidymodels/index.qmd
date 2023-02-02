@@ -1,0 +1,11 @@
+---
+title: "Getting Started with Tidymodels"
+author: "John Karuitha"
+date: "2021-05-25"
+categories: [R, code, analysis, Tidymodels, Machine Learning]
+image: "image.png"
+---
+
+The idea behind tidymodels is to address the inconsistency problem prevalent in R (Kuhn and Wickham 2020). Given that different machine learning engines were developed by different people, the terminologies and steps tend to differ across these engines. The caret package, which has been the bedrock of machine learning in R, did not adequately address these inconsistency issues. The developer of caret, Marx Kuhn, has been at the forefront of developing tidymodels alongside other data scientists at R Studio. The tidymodels framework provides a standardized framework for fitting machine learning models by providing a uniform syntax. You can read more on tidymodels here and here and here.
+
+The [link](https://rpubs.com/Karuitha/tidymodels_basics0) to the project is <https://rpubs.com/Karuitha/tidymodels_basics0>

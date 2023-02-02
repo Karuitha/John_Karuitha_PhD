@@ -1,0 +1,17 @@
+---
+title: " Reducing the Number of High Fatality Accidents in the UK "
+author: "John Karuitha"
+date: " 2022-01-03 "
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this project, I use data from the Department of Transport in the United Kingdom (UK) to derive insights to reduce fatalities from major accidents. Specifically, the project aims to identify factors associated with road accidents fatalities. The key findings are:
+
+Accident casualties peak during weekends, starting from Friday and falling on Sunday.
+Accidents casualties vary by time of day.
+Major accidents and accident casualties mainly happen when the weather is fine.
+Major accidents and accident casualties mainly occur in road stretches with speed limits of 30 mph and 60 mph.
+The project proceeds by laying out the background first, followed by exploratory data analysis. The project then delves into the data analysis to garner insights. The project then concludes. 
+The [link]( https://rpubs.com/Karuitha/fatal_accidents) 
+<https://rpubs.com/Karuitha/fatal_accidents>

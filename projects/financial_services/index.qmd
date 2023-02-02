@@ -1,0 +1,10 @@
+---
+title: "Access to Financial Services: A Global Comparison"
+author: "John Karuitha"
+date: "­2022-05-01"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this project, I use financial access data from the IMF to map the current state and the trends in access to finance globally.
+The [link](https://rpubs.com/Karuitha/fin_acess_dash) to the project is <https://rpubs.com/Karuitha/fin_acess_dash>

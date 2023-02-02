@@ -1,0 +1,11 @@
+---
+title: "Plasma Ferritin Concentration Study"
+author: "John Karuitha"
+date: "2022-10-23"
+categories: [R, code, analysis]
+image: "image.gif"
+---
+
+In this article, we assess the effect of a collection of explanatory variables on the plasma ferritin concentration (Ferr) in 202 Australian athletes. The file Sports Data CW 2021.csv contains the data on the plasma ferritin concentration as well as a selection of demographic variables of 202 male and female athletes. In particular, the data set comprises observations on the following 11 variables: Sex, Sport, LBM, RCC, WCC, Hc, Hg, BMI, SSF, X.Bfat, Ferr. 
+
+The [link](https://rpubs.com/Karuitha/ferritin) to the project is <https://rpubs.com/Karuitha/ferritin>

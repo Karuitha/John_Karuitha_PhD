@@ -1,0 +1,10 @@
+---
+title: "Natural language Processing in R: Sentiment Analysis of Kenya’s Star Newspaper on Saturday July 16, 2022"
+author: "John Karuitha"
+date: "2022-07-16"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this analysis, I scrap data from the Star Newspaper for Saturday July 16, 2022 and evaluate the sentiment and topics that dominate the news.
+The [link](https://rpubs.com/Karuitha/sentiment_star) to the project is <https://rpubs.com/Karuitha/sentiment_star>

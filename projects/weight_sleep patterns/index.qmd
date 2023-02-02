@@ -1,0 +1,10 @@
+---
+title: "Weight and Sleeping Patterns in the UK"
+author: "John Karuitha"
+date: "2022-08-08"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+With sedentary lifestyles, obesity has become a significant health issue globally. Overweight individuals have a higher risk of developing heart disease, stroke, cancer, kidney disease, among others (Shah et al. 2021). These health issues place additional strain on health facilities and state financial resources. Consequently, much research goes into tracking obesity, mapping out possible health complications associated with obesity, establishing the factors contributing to obesity. Critically, many resources go to the design of measures to minimise the prevalence of obesity (Fruh 2017; Malik, Willett, and Hu 2013; Lopez 2007).In this project, we explore the link between age, sleep, and body mass index in a sample of individuals from the United Kingdom.
+
+The[link](https://rpubs.com/Karuitha/weight_sleep) to the project is <https://rpubs.com/Karuitha/weight_sleep>

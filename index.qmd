@@ -29,6 +29,6 @@ Proficient in Ms Excel, R, Python, MySQL, PostgreSQL, Teradata, SQL Server, Git 
 
 Working knowledge of Bash, Docker, Stata and E-views.
 
-I hold a PhD in Financial Economics from University of the Witwatersrand, Johannesburg, South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).
+I hold a PhD in Financial! Economics from [University of the Witwatersrand, Johannesburg](https://www.wits.ac.za/), South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).
 
 In my free time I swim, travel, watch documentaries and listen to music.

@@ -1,0 +1,10 @@
+---
+title: "Report for the Cars and Pressure Datasets"
+author: "John Karuitha"
+date: "2021-05-23"
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+In this short report, I will work with the pressure and cars datasets that are inbuilt in R. I will start by plotting the pressure dataset, and then capture the top six (6) rows of the cars dataset. I will also use an appropriate theme to colour the fonts of my graph and tables. Finally, I will publish the report to rpubs.
+The [link](https://rpubs.com/Karuitha/karuitha_cars_pressure) to the project is <https://rpubs.com/Karuitha/karuitha_cars_pressure>

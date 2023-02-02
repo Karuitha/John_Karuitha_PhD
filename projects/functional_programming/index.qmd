@@ -1,0 +1,16 @@
+---
+title: "Functional Programming in R Using Purrr"
+author: "John Karuitha"
+date: "2022-06-22"
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+The purrr (Henry and Wickham 2020) package is part of the tidyverse (Wickham et al. 2019) and contains functions that allow us to;
+
+Apply named or anonymous functions to vectors or lists.
+
+Save the results in a variety of convenient formats.
+
+For instance, you could have data in a series of Ms Excel documents and desire to combine them into one data set. Similarly, you could use purrr to generate a series of reports customised to an audience.
+The [link](https://rpubs.com/Karuitha/purrr_functional) to the project is <https://rpubs.com/Karuitha/purrr_functional>

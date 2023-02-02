@@ -1,0 +1,17 @@
+---
+title: "Which Beauty Products do Customers Often Buy Together?"
+author: "John Karuitha"
+date: "2023-01-08"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this mini-project, I explore association rules using data from a beauty products shop. Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. In any given transaction with a variety of items, association rules are meant to discover the rules that determine how or why certain items are connected (Kotsiantis and Kanellopoulos 2006).
+
+The questions that I explore in this analysis are;
+
+* Which beauty products have the highest demand? (See section 3)
+* Which combinations of beauty products are often purchased together? (See section 4)
+* How best can the owner of this beauty shop utilize this analysis? (See section 6)
+
+The following is the [link](https://rpubs.com/Karuitha/beauty_association) to the project <https://rpubs.com/Karuitha/beauty_association>

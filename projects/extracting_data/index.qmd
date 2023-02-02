@@ -1,0 +1,14 @@
+---
+title: "Extracting Data from 200 Nested Excel Files Using the R Programming Language"
+author: "John Karuitha"
+date: "2022-04-01"
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+In this project, I demonstrate how to extract data from multiple excel files nested in different folders and sub-folders. Ordinarily, this data would require a person to open each folder and sub-folder. Next, open each Ms Excel file inside the folders or sub-folders, and then copy-paste the content of each of the Excel files to a master Excel file.
+
+Copy-pasting is viable when dealing with a few data files. However, even for a very efficient Ms Excel user, cutting and pasting data from 200 Ms Excel files to create one data set is a tall order. Fortunately, the R programming language makes such tasks easy and fast.
+
+I start by loading the required packages. Note that this step requires an internet connection.
+The [link](https://rpubs.com/Karuitha/nested_excel) to the project is <https://rpubs.com/Karuitha/nested_excel>

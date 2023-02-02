@@ -1,0 +1,10 @@
+---
+title: "Gathering Data from Websites Using R Programming Language"
+author: "John Karuitha"
+date: "2021-07-13"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+Have you ever come across some valuable data on a website and wished to access and use it in your research?11 The author is at Karatina University, School of Business, P.O. Box 1957-10101, Karatina, Kenya. Did you get discouraged from using data from the internet because writing down the data by hand and transferring it to a spreadsheet seemed daunting?22 The R code for this project is available in my GitHub account on this link https://github.com/Karuitha/scrapping_la_liga/blob/master/code/scraps.R. Copy and paste the address on a new browser tab Have you ever spent a substantial amount of time trying to copy and paste data from a website with plenty of frustration and headache? If you have found yourself in any of these and similar situations, this write-up is for you. I will describe the basics of harvesting data from websites, commonly known as web scraping, using the R (R Core Team 2021R Core Team. 2021. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.R-project.org/.) programming language. I start with tabular data that most financial analysts, economists, and other business professionals and academics use on many occasions. In future articles, I will delve deeper into scrapping websites for text and different data types. The basics in this section should meet the needs of most users but watch out for more advanced applications of web scraping on my blog and rpubs.
+The [link]( https://rpubs.com/Karuitha/web_scrapping_1) <https://rpubs.com/Karuitha/web_scrapping_1>

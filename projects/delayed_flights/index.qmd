@@ -1,0 +1,14 @@
+---
+title: "Using Machine Learning to Predict Flight Delays: Decision Trees and Random Forests"
+author: "John Karuitha"
+date: "­2023-01-16"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+Flight delays are a significant concern in the airline industry. Apart from the inconvenience caused to travelers, delays also affect the reputation of airlines, negatively impacting market share. In this analysis, I utilize data for flights between New York and Washington DC. The central questions in the analysis are;
+
+- Which factors have a significant relationship to flight delays?
+- Can machine learning be useful in predicting flight delays?
+
+The [link](https://rpubs.com/Karuitha/flights_delays) to the project is <https://rpubs.com/Karuitha/flights_delays>

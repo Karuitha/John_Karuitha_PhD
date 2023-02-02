@@ -1,0 +1,11 @@
+---
+title: " Who’s the Fastest of All? Analyzing the 100 Metres Men’s Sprint Data "
+author: "John Karuitha"
+date: " 2022-02-27 "
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+I use data from World Athletics on the best times posted by male athletes in the 100 metres sprint from 1958 to present 11 The data is available on this link https://www.worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/men/senior?regionType=world&timing=electronic&windReading=regular&page=21&bestResultsOnly=false&firstDay=1900-01-01&lastDay=2021-09-20.
+The [link](https://rpubs.com/Karuitha/a100_meters) to the project is
+< https://rpubs.com/Karuitha/a100_meters >

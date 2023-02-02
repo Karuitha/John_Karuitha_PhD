@@ -1,0 +1,12 @@
+---
+title: "Determinants of Body Fat"
+author: "John Karuitha"
+date: "2022-08-08"
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+The dataset Bodyfat4 shows the body fat percentage for 252 individuals. There are 13 variables. First, there is an identifier variable (IDNO) that uniquely identifies each observation. The body fat (BODYFAT) content is the dependent variable. The remaining eleven (11) are the independent variables that could explain the variability of body fat among the different individuals. The dataset has no missing values.
+
+The task is to build a regression model that can be useful in explaining and predicting the body fat of individuals. The data analysis proceeds as follows. In the next section, I visualize the data and then present summary statistics. Next, I present the correlation analysis and then the results of the regression.
+The [link](https://rpubs.com/Karuitha/body_fat) to the project is <https://rpubs.com/Karuitha/body_fat>

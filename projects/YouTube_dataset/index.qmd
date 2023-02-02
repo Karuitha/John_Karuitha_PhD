@@ -1,0 +1,9 @@
+---
+title: "Regression Analysis of Data on YouTube Views"
+author: "John Karuitha"
+date: 2022-05-26
+categories: [R, code, analysis]
+image: "image.png"
+---
+
+In this project, I seek to to explain how much the quality of a video affects the number of views it receives on social media. In a world where people can now buy followers and likes, would such an investment increase the number of views that their content receives? This is a causal question. I use a dataset created by Cheng, Dale and Liu at Simon Fraser University. The data includes observations about 9618 videos shared on YouTube. Please see this link for details about how the data was collected. The [link](https://rpubs.com/Karuitha/regression_youtube) to the project is <https://rpubs.com/Karuitha/regression_youtube>

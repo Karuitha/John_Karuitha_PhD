@@ -1,0 +1,12 @@
+---
+title: "Estimating Systematic Risk Using the Capital Asset Pricing Model, CAPM"
+author: "John Karuitha"
+date: "2022-11-09"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this analysis, I use stock prices for Microsoft and General Motors (GM) to estimate the systematic risk of the stocks using the Capital Asset Pricing Model (CAPM). CAPM, developed by William Sharpe, Jack Treynor, John Lintner and Jan Mossin (Perold, 2004) quantifies the systematic risk and the expected return on an asset, particularly stocks.
+
+The [link](https://rpubs.com/Karuitha/capm) to the project is <https://rpubs.com/Karuitha/capm>
+

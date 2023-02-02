@@ -1,0 +1,15 @@
+---
+title: "Becoming a Geographer: The Art of Creating Maps in R"
+author: "John Karuitha"
+date: "2022-10-21"
+categories: [R, code, analysis]
+image: "image.jpeg"
+---
+
+In this mini-project, I demonstrate how to make presentable maps using R. Often, researchers may require to visualise their data using maps. For instance, finance researchers and professionals may desire to visualise the extent of financial inclusion in different countries. Visualizations and exploratory data analysis (EDA) are some of the most overlooked tasks in data analysis. However, as John Tukey noted;
+
+Numerical quantities focus on expected values, graphical summaries on unexpected values.
+
+When dealing with data that has a spatial element, the ideal way to visualise such data is to create a map of the globe with different shades of color presenting the degree of inclusion or exclusion. Fortunately, R and the associated packages tidyverse, maps, mapproj makes such tasks easy to accomplish.
+
+The [link](https://rpubs.com/Karuitha/maps_art) to the project is <https://rpubs.com/Karuitha/maps_art>
