@@ -1,13 +1,336 @@
 ---
-title: "Post With Code"
-author: "John Karuitha"
-date: "2020-01-27"
-categories: [news, code, analysis]
-image: "image.jpg"
+# title: "Post With Code"
+# author: "John Karuitha"
+# date: "2020-01-27"
+categories: [Python, Pandas, sklearn, Machine Learning, news, code, analysis]
+image: "banner.jpg"
+title: "**Predicting Wine Quality Using Python: Support Vector Machines, Random Forest and Neural Networks**"
+description: "Independent Data Analysis Project"
+author: 
+    - name: John Karuitha
+      url: www.linkedin.com/in/Karuitha
+      affiliation: "Karatina University, School of Business, Karatina, Kenya"
+      affiliation-url: www.karu.ac.ke
+subtitle: "*Applied Machine Learning in sklearn*"
+date: today
+title-block-banner: "banner.jpg"
+title-block-banner-color: "white"
+format: 
+    html:
+        theme: sandstone
+        number-sections: true
+        code-fold: false
+        code-background: true
+        toc: true
+        toc-title: "Contents"
+        toc-depth: 3
+        toc-float: true
+        linkcolor: "gray"
+        link-citations: true
+    pdf:
+        header-includes: |
+            \usepackage{pdflscape}
+            \usepackage[OT1]{fontenc}
+            \newcommand{\blandscape}{\begin{landscape}}
+            \newcommand{\elandscape}{\end{landscape}}
+        toc: true
+        toc-title: "Contents"
+        toc-depth: 3
+        toccolor: "blue"
+        number-sections: true
+        number-depth: 3
+        documentclass: report
+        margin-left: 30mm
+        margin-right: 30mm
+        linkcolor: "blue"
+        link-citations: true
+editor: visual
+bibliography: citations.bib
+csl: harvard.csl
 ---
 
-This is a post with executable code.
+# **Background**
 
-```{r}
-1 + 1
+In this analysis, I use data from the UCI machine learning repository regarding the quality of red wine. The objective is to develop machine learning algorithms that can reasonably predict the wine rating based on a set of variables/features. Specifically, we train 3 machine learning models.
+
+1.  Support vector machines (SVM) [@pisner2020support].
+2.  Random forest model [@parmar2019review].
+3.  Neural network model [@hancock2020survey].
+
+
+::: callout-tip
+## Read More of my Work
+
+Please visit [my rpubs site](www.rpubs.com/Karuitha) to see more data projects. Alternatively, copy and paste the link <https://www.rpubs.com/Karuitha> into your browser.
+
+My data visualizations projects are available in my [Tableau Public profile page](https://public.tableau.com/app/profile/john.karuitha) or copy and paste the link <https://public.tableau.com/app/profile/john.karuitha>.
+
+My Shiny web apps are available on this [site](https://karuitha.shinyapps.io/). You can copy-paste this web address instead <https://karuitha.shinyapps.io/>.
+:::
+
+::: callout-note
+## Tools Utilized & Skills Applied
+
+Python, sklearn, matplotlib, pandas, seaborn, numpy, Data Science, Machine Learning
+:::
+
+
+The data that we utilise in this analysis is available on this [link](https://archive.ics.uci.edu/ml/datasets/wine+quality). For the purpose of this analysis, I use data for red wine. [^1]
+
+[^1]: Note: The data is also available for white wine.See <https://archive.ics.uci.edu/ml/datasets/wine+quality>.
+
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn import svm
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.utils import resample
 ```
+
+I start by downloading and reading the dataset.
+
+```{python}
+# help(pd.read_csv)
+wine = pd.read_csv("winequality-red.csv", sep = ";")
+wine.head()
+```
+
+Next, we look at the number of rows and columns in the dataset.
+
+```{python}
+wine.shape
+```
+
+```{python}
+wine.info()
+```
+
+# **Explore the Data**
+
+In this section, we examine the data. First, we list the variables.
+
+The input variables (based on physicochemical tests):
+
+1.  fixed acidity
+2.  volatile acidity
+3.  citric acid
+4.  residual sugar
+5.  chlorides
+6.  free sulfur dioxide
+7.  total sulfur dioxide
+8.  density
+9.  pH
+10. sulphates
+11. alcohol
+
+The output variable (based on sensory data):
+
+1.  quality (score between 0 and 10)
+
+We then check for missing and duplicate values. We see that there are no missing values.
+
+```{python}
+wine.isna().sum()
+```
+
+However, there are 240 duplicated observations that we drop.
+
+```{python}
+wine.duplicated().sum()
+```
+
+```{python}
+wine = wine.drop_duplicates()
+```
+
+Next, I do feature engineering by converting the target variable `quality` to a binary variable. As it stands, the wine is in the following categories.
+
+```{python}
+wine["quality"].unique()
+```
+
+Specifically, wines below a rating of () are bad quality while those equal to or above () are good quality wines. Note that this is a personal choice and hence subjective.
+
+Note that after this update, we only have 2 categories for wine quality, 0 and 1.
+
+```{python}
+wine["quality"] = [1 if i >= 6.5 else 0 for i in wine["quality"]]
+
+wine.head()
+```
+
+# **Data Visualization**
+
+In this section, I visualize the data. To start with, I make a histogram for indepedent variables/ features.
+
+```{python}
+# plt.subplots(4, 3, figsize=(12, 8))
+for variable in wine.columns[:-1]:
+
+    plt.hist(wine[wine["quality"] == 1][variable], color = "purple", alpha = 0.5, density = True)
+
+    plt.hist(wine[wine["quality"] == 0][variable], color = "green", alpha = 0.5, density = True)
+
+    plt.title(variable)
+    plt.xlabel(variable)
+    plt.ylabel("Probability")
+    plt.legend()
+
+    
+    plt.show()
+```
+
+Overall, it appears like Alcohol content is a great disciminator for the quality of wines although the other variables are also useful.
+
+## **Evaluating Class Balance/ Imbalance**
+
+In this section, we evaluate the class balance in the dataset. As shown below, there is a high degree of the class balance with 217 good wines in the dataset against 1382 bad wines. This level of the class balance could affect the effeciency of the machine learning models. One approach is to upsample the underrepresented class or downsample the overrepresented class. This approach is more cost efficient. The alternative approach is is to get more data for the underrepresented class.
+
+```{python}
+wine["quality"].value_counts()
+```
+
+```{python}
+# help(sns.countplot)
+sns.countplot(wine["quality"], palette = "dark")
+```
+
+We shall upsample the training data later.
+
+# **Baseline Evaluation Metric**
+
+To evaluate whether our models work well, we have to develop the baseline evaluation metric. We pose this question; if a person were to guess that the quality of all wines is bad (remember bad is the dominant class in the data), what would be their accuracy?
+
+```{python}
+wine["quality"].value_counts()
+
+1382 / (1382 + 217)
+```
+
+```{python}
+[0]*1000
+confusion_matrix(wine["quality"], [0] * len(wine))
+```
+
+```{python}
+classification_report(wine["quality"], [0] * len(wine))
+```
+
+In this case, the person would be 86% accurate. Hence, our models have to be more than 86% accurate. For the other scores like precision and recall, we ought to do better than this baseline.
+
+# **Training and Testing Sets**
+
+In this section we will create a training set and a test set. We set aside 20% of the data for testing and use the remainder for testing.
+
+```{python}
+x = wine.drop(columns = ["quality"])
+y = wine["quality"]
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2)
+
+x_train.head()
+```
+
+# **Scaling the Data**
+
+The scale of the data could also affect the performance of the machine learning models. For instance, if one variable is in the millions (e.g. 5,233,150) while another is a fraction (e.g. 0.5), the models will likely pick the signal in the larger value more than the fraction. However, the fraction could also contain a valuable signal that is masked due to the scale.
+
+```{python}
+sc = StandardScaler()
+x_train = sc.fit_transform(x_train)
+x_test = sc.transform(x_test)
+x_train[:3]
+```
+
+Now our data is in the same scale.
+
+# **Training the Models**
+
+In this section we train the three models in the following order:
+
+-   Support vector machines model.
+-   Random forest model.
+-   Neural network model.
+
+## **Support Vector Machines**
+
+In this section, we train the support vector machines model.
+
+```{python}
+clf = svm.SVC()
+clf.fit(x_train, y_train)
+
+clf_predictions = clf.predict(x_test)
+
+confusion_matrix(y_test, clf_predictions)
+```
+
+```{python}
+classification_report(y_test, clf_predictions)
+```
+
+Again this model does better than the baseline model.
+
+## **Random Forest Model**
+
+Next, we fit the random forest model with 1000 trees in the forest.
+
+```{python}
+
+rf_model = RandomForestClassifier(n_estimators=1000)
+
+rf_model.fit(x_train, y_train)
+```
+
+We examine the metrics of the model, that is how it performs in the testing set. We start by doing the prediction using the model and then evaluate the performance of the model on the testing set. In this case, we have an accuracy of 94%, sensitivity at 98%, and specificity at 96%. This is above the base metrics in section 4.
+
+```{python}
+predictions_rfm = rf_model.predict(x_test)
+
+classification_report(y_test, predictions_rfm)
+```
+
+```{python}
+confusion_matrix(y_test, predictions_rfm)
+```
+
+## **Neural Network Model**
+
+Neural nets work well with huge amounts of data, more so text, images and other unstructured data. The accuracy of 89% is marginally above the baseline metric of 86% in section 4.
+
+```{python}
+mlp = MLPClassifier(hidden_layer_sizes = (11, 11, 11), max_iter = 1000)
+
+mlp.fit(x_train, y_train)
+
+mlp_predictions = mlp.predict(x_test)
+
+confusion_matrix(y_test, mlp_predictions)
+```
+
+```{python}
+classification_report(y_test, mlp_predictions)
+```
+
+# **Conclusion**
+
+In this analysis, we have trained the following classification models to predict the quality of red wine.
+
+-   Support vector machines model.
+-   Random forest model.
+-   Neural network model.
+
+The baseline accuracy was 86% and the all the models seem to outperform this baseline accuracy. The random forest model does better than the neural network model and the support vector machine model. The models could be improved through hyperparameter tuning and the upsampling or downsampling of the underrepresented class in the dependent or outcome variable.
+
+# **References** {.unnumbered}
+
