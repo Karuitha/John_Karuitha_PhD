@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="John Karuitha">
-<meta name="dcterms.date" content="2023-02-21">
+<meta name="dcterms.date" content="2023-05-14">
 <meta name="description" content="Independent Data Analysis Project">
 
 <title>John Karuitha, PhD - Predicting Wine Quality Using Python: Support Vector Machines, Random Forest and Neural Networks</title>
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,48 +50,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -104,8 +76,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -146,12 +117,23 @@ div.csl-indent {
   }
 }</script>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      color: white;
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
 background-image: url(banner.jpg);
 background-size: cover;
-    }
-    </style>
+      }
+</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -171,65 +153,65 @@ background-size: cover;
     <span class="navbar-title">John Karuitha, PhD</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html">
+    <a class="nav-link" href="../../research.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../media.html">
+    <a class="nav-link" href="../../media.html" rel="" target="">
  <span class="menu-text">Media</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../workshops.html">
+    <a class="nav-link" href="../../workshops.html" rel="" target="">
  <span class="menu-text">Workshops and Conferences</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../certifications.html">
+    <a class="nav-link" href="../../certifications.html" rel="" target="">
  <span class="menu-text">Certifications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resume.html">
+    <a class="nav-link" href="../../resume.html" rel="" target="">
  <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/Karuitha"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/Karuitha" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/kingzz2005"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/kingzz2005" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../www.linkedin.com/in/Karuitha"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="../../www.linkedin.com/in/Karuitha" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -262,7 +244,7 @@ background-size: cover;
     <div class="quarto-title-meta-heading">Affiliation</div>
     
       <div class="quarto-title-meta-contents">
-      <a href="www.linkedin.com/in/Karuitha">John Karuitha</a> 
+      <p class="author"><a href="www.linkedin.com/in/Karuitha">John Karuitha</a> </p>
     </div>
       <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -279,7 +261,7 @@ background-size: cover;
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 21, 2023</p>
+        <p class="date">May 14, 2023</p>
       </div>
     </div>
     
@@ -295,25 +277,25 @@ background-size: cover;
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="toc-section-number">1</span>  <strong>Background</strong></a></li>
-  <li><a href="#explore-the-data" id="toc-explore-the-data" class="nav-link" data-scroll-target="#explore-the-data"><span class="toc-section-number">2</span>  <strong>Explore the Data</strong></a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">3</span>  <strong>Data Visualization</strong></a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> <strong>Background</strong></a></li>
+  <li><a href="#explore-the-data" id="toc-explore-the-data" class="nav-link" data-scroll-target="#explore-the-data"><span class="header-section-number">2</span> <strong>Explore the Data</strong></a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">3</span> <strong>Data Visualization</strong></a>
   <ul class="collapse">
-  <li><a href="#evaluating-class-balance-imbalance" id="toc-evaluating-class-balance-imbalance" class="nav-link" data-scroll-target="#evaluating-class-balance-imbalance"><span class="toc-section-number">3.1</span>  <strong>Evaluating Class Balance/ Imbalance</strong></a></li>
+  <li><a href="#evaluating-class-balance-imbalance" id="toc-evaluating-class-balance-imbalance" class="nav-link" data-scroll-target="#evaluating-class-balance-imbalance"><span class="header-section-number">3.1</span> <strong>Evaluating Class Balance/ Imbalance</strong></a></li>
   </ul></li>
-  <li><a href="#baseline-evaluation-metric" id="toc-baseline-evaluation-metric" class="nav-link" data-scroll-target="#baseline-evaluation-metric"><span class="toc-section-number">4</span>  <strong>Baseline Evaluation Metric</strong></a></li>
-  <li><a href="#training-and-testing-sets" id="toc-training-and-testing-sets" class="nav-link" data-scroll-target="#training-and-testing-sets"><span class="toc-section-number">5</span>  <strong>Training and Testing Sets</strong></a></li>
-  <li><a href="#scaling-the-data" id="toc-scaling-the-data" class="nav-link" data-scroll-target="#scaling-the-data"><span class="toc-section-number">6</span>  <strong>Scaling the Data</strong></a></li>
-  <li><a href="#training-the-models" id="toc-training-the-models" class="nav-link" data-scroll-target="#training-the-models"><span class="toc-section-number">7</span>  <strong>Training the Models</strong></a>
+  <li><a href="#baseline-evaluation-metric" id="toc-baseline-evaluation-metric" class="nav-link" data-scroll-target="#baseline-evaluation-metric"><span class="header-section-number">4</span> <strong>Baseline Evaluation Metric</strong></a></li>
+  <li><a href="#training-and-testing-sets" id="toc-training-and-testing-sets" class="nav-link" data-scroll-target="#training-and-testing-sets"><span class="header-section-number">5</span> <strong>Training and Testing Sets</strong></a></li>
+  <li><a href="#scaling-the-data" id="toc-scaling-the-data" class="nav-link" data-scroll-target="#scaling-the-data"><span class="header-section-number">6</span> <strong>Scaling the Data</strong></a></li>
+  <li><a href="#training-the-models" id="toc-training-the-models" class="nav-link" data-scroll-target="#training-the-models"><span class="header-section-number">7</span> <strong>Training the Models</strong></a>
   <ul class="collapse">
-  <li><a href="#support-vector-machines" id="toc-support-vector-machines" class="nav-link" data-scroll-target="#support-vector-machines"><span class="toc-section-number">7.1</span>  <strong>Support Vector Machines</strong></a></li>
-  <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><span class="toc-section-number">7.2</span>  <strong>Random Forest Model</strong></a></li>
-  <li><a href="#neural-network-model" id="toc-neural-network-model" class="nav-link" data-scroll-target="#neural-network-model"><span class="toc-section-number">7.3</span>  <strong>Neural Network Model</strong></a></li>
+  <li><a href="#support-vector-machines" id="toc-support-vector-machines" class="nav-link" data-scroll-target="#support-vector-machines"><span class="header-section-number">7.1</span> <strong>Support Vector Machines</strong></a></li>
+  <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model"><span class="header-section-number">7.2</span> <strong>Random Forest Model</strong></a></li>
+  <li><a href="#neural-network-model" id="toc-neural-network-model" class="nav-link" data-scroll-target="#neural-network-model"><span class="header-section-number">7.3</span> <strong>Neural Network Model</strong></a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="toc-section-number">8</span>  <strong>Conclusion</strong></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">8</span> <strong>Conclusion</strong></a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><strong>References</strong></a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -329,12 +311,12 @@ background-size: cover;
 <li>Random forest model <span class="citation" data-cites="parmar2019review">(<a href="#ref-parmar2019review" role="doc-biblioref">Parmar, Katariya and Patel, 2019</a>)</span>.</li>
 <li>Neural network model <span class="citation" data-cites="hancock2020survey">(<a href="#ref-hancock2020survey" role="doc-biblioref">Hancock and Khoshgoftaar, 2020</a>)</span>.</li>
 </ol>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Read More of my Work
 </div>
 </div>
@@ -344,12 +326,12 @@ Read More of my Work
 <p>My Shiny web apps are available on this <a href="https://karuitha.shinyapps.io/">site</a>. You can copy-paste this web address instead <a href="https://karuitha.shinyapps.io/" class="uri">https://karuitha.shinyapps.io/</a>.</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tools Utilized &amp; Skills Applied
 </div>
 </div>
@@ -386,105 +368,106 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="50">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>fixed acidity</th>
-      <th>volatile acidity</th>
-      <th>citric acid</th>
-      <th>residual sugar</th>
-      <th>chlorides</th>
-      <th>free sulfur dioxide</th>
-      <th>total sulfur dioxide</th>
-      <th>density</th>
-      <th>pH</th>
-      <th>sulphates</th>
-      <th>alcohol</th>
-      <th>quality</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>7.4</td>
-      <td>0.70</td>
-      <td>0.00</td>
-      <td>1.9</td>
-      <td>0.076</td>
-      <td>11.0</td>
-      <td>34.0</td>
-      <td>0.9978</td>
-      <td>3.51</td>
-      <td>0.56</td>
-      <td>9.4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>7.8</td>
-      <td>0.88</td>
-      <td>0.00</td>
-      <td>2.6</td>
-      <td>0.098</td>
-      <td>25.0</td>
-      <td>67.0</td>
-      <td>0.9968</td>
-      <td>3.20</td>
-      <td>0.68</td>
-      <td>9.8</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7.8</td>
-      <td>0.76</td>
-      <td>0.04</td>
-      <td>2.3</td>
-      <td>0.092</td>
-      <td>15.0</td>
-      <td>54.0</td>
-      <td>0.9970</td>
-      <td>3.26</td>
-      <td>0.65</td>
-      <td>9.8</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>11.2</td>
-      <td>0.28</td>
-      <td>0.56</td>
-      <td>1.9</td>
-      <td>0.075</td>
-      <td>17.0</td>
-      <td>60.0</td>
-      <td>0.9980</td>
-      <td>3.16</td>
-      <td>0.58</td>
-      <td>9.8</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>7.4</td>
-      <td>0.70</td>
-      <td>0.00</td>
-      <td>1.9</td>
-      <td>0.076</td>
-      <td>11.0</td>
-      <td>34.0</td>
-      <td>0.9978</td>
-      <td>3.51</td>
-      <td>0.56</td>
-      <td>9.4</td>
-      <td>5</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">fixed acidity</th>
+<th data-quarto-table-cell-role="th">volatile acidity</th>
+<th data-quarto-table-cell-role="th">citric acid</th>
+<th data-quarto-table-cell-role="th">residual sugar</th>
+<th data-quarto-table-cell-role="th">chlorides</th>
+<th data-quarto-table-cell-role="th">free sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">total sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">density</th>
+<th data-quarto-table-cell-role="th">pH</th>
+<th data-quarto-table-cell-role="th">sulphates</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">quality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>7.4</td>
+<td>0.70</td>
+<td>0.00</td>
+<td>1.9</td>
+<td>0.076</td>
+<td>11.0</td>
+<td>34.0</td>
+<td>0.9978</td>
+<td>3.51</td>
+<td>0.56</td>
+<td>9.4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>7.8</td>
+<td>0.88</td>
+<td>0.00</td>
+<td>2.6</td>
+<td>0.098</td>
+<td>25.0</td>
+<td>67.0</td>
+<td>0.9968</td>
+<td>3.20</td>
+<td>0.68</td>
+<td>9.8</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>7.8</td>
+<td>0.76</td>
+<td>0.04</td>
+<td>2.3</td>
+<td>0.092</td>
+<td>15.0</td>
+<td>54.0</td>
+<td>0.9970</td>
+<td>3.26</td>
+<td>0.65</td>
+<td>9.8</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>11.2</td>
+<td>0.28</td>
+<td>0.56</td>
+<td>1.9</td>
+<td>0.075</td>
+<td>17.0</td>
+<td>60.0</td>
+<td>0.9980</td>
+<td>3.16</td>
+<td>0.58</td>
+<td>9.8</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>7.4</td>
+<td>0.70</td>
+<td>0.00</td>
+<td>1.9</td>
+<td>0.076</td>
+<td>11.0</td>
+<td>34.0</td>
+<td>0.9978</td>
+<td>3.51</td>
+<td>0.56</td>
+<td>9.4</td>
+<td>5</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -584,105 +567,106 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="57">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>fixed acidity</th>
-      <th>volatile acidity</th>
-      <th>citric acid</th>
-      <th>residual sugar</th>
-      <th>chlorides</th>
-      <th>free sulfur dioxide</th>
-      <th>total sulfur dioxide</th>
-      <th>density</th>
-      <th>pH</th>
-      <th>sulphates</th>
-      <th>alcohol</th>
-      <th>quality</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>7.4</td>
-      <td>0.70</td>
-      <td>0.00</td>
-      <td>1.9</td>
-      <td>0.076</td>
-      <td>11.0</td>
-      <td>34.0</td>
-      <td>0.9978</td>
-      <td>3.51</td>
-      <td>0.56</td>
-      <td>9.4</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>7.8</td>
-      <td>0.88</td>
-      <td>0.00</td>
-      <td>2.6</td>
-      <td>0.098</td>
-      <td>25.0</td>
-      <td>67.0</td>
-      <td>0.9968</td>
-      <td>3.20</td>
-      <td>0.68</td>
-      <td>9.8</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7.8</td>
-      <td>0.76</td>
-      <td>0.04</td>
-      <td>2.3</td>
-      <td>0.092</td>
-      <td>15.0</td>
-      <td>54.0</td>
-      <td>0.9970</td>
-      <td>3.26</td>
-      <td>0.65</td>
-      <td>9.8</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>11.2</td>
-      <td>0.28</td>
-      <td>0.56</td>
-      <td>1.9</td>
-      <td>0.075</td>
-      <td>17.0</td>
-      <td>60.0</td>
-      <td>0.9980</td>
-      <td>3.16</td>
-      <td>0.58</td>
-      <td>9.8</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>7.4</td>
-      <td>0.66</td>
-      <td>0.00</td>
-      <td>1.8</td>
-      <td>0.075</td>
-      <td>13.0</td>
-      <td>40.0</td>
-      <td>0.9978</td>
-      <td>3.51</td>
-      <td>0.56</td>
-      <td>9.4</td>
-      <td>0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">fixed acidity</th>
+<th data-quarto-table-cell-role="th">volatile acidity</th>
+<th data-quarto-table-cell-role="th">citric acid</th>
+<th data-quarto-table-cell-role="th">residual sugar</th>
+<th data-quarto-table-cell-role="th">chlorides</th>
+<th data-quarto-table-cell-role="th">free sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">total sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">density</th>
+<th data-quarto-table-cell-role="th">pH</th>
+<th data-quarto-table-cell-role="th">sulphates</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+<th data-quarto-table-cell-role="th">quality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>7.4</td>
+<td>0.70</td>
+<td>0.00</td>
+<td>1.9</td>
+<td>0.076</td>
+<td>11.0</td>
+<td>34.0</td>
+<td>0.9978</td>
+<td>3.51</td>
+<td>0.56</td>
+<td>9.4</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>7.8</td>
+<td>0.88</td>
+<td>0.00</td>
+<td>2.6</td>
+<td>0.098</td>
+<td>25.0</td>
+<td>67.0</td>
+<td>0.9968</td>
+<td>3.20</td>
+<td>0.68</td>
+<td>9.8</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>7.8</td>
+<td>0.76</td>
+<td>0.04</td>
+<td>2.3</td>
+<td>0.092</td>
+<td>15.0</td>
+<td>54.0</td>
+<td>0.9970</td>
+<td>3.26</td>
+<td>0.65</td>
+<td>9.8</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>11.2</td>
+<td>0.28</td>
+<td>0.56</td>
+<td>1.9</td>
+<td>0.075</td>
+<td>17.0</td>
+<td>60.0</td>
+<td>0.9980</td>
+<td>3.16</td>
+<td>0.58</td>
+<td>9.8</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>7.4</td>
+<td>0.66</td>
+<td>0.00</td>
+<td>1.8</td>
+<td>0.075</td>
+<td>13.0</td>
+<td>40.0</td>
+<td>0.9978</td>
+<td>3.51</td>
+<td>0.56</td>
+<td>9.4</td>
+<td>0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -859,99 +843,100 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="64">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>fixed acidity</th>
-      <th>volatile acidity</th>
-      <th>citric acid</th>
-      <th>residual sugar</th>
-      <th>chlorides</th>
-      <th>free sulfur dioxide</th>
-      <th>total sulfur dioxide</th>
-      <th>density</th>
-      <th>pH</th>
-      <th>sulphates</th>
-      <th>alcohol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>926</th>
-      <td>9.4</td>
-      <td>0.240</td>
-      <td>0.33</td>
-      <td>2.3</td>
-      <td>0.061</td>
-      <td>52.0</td>
-      <td>73.0</td>
-      <td>0.99786</td>
-      <td>3.47</td>
-      <td>0.90</td>
-      <td>10.2</td>
-    </tr>
-    <tr>
-      <th>591</th>
-      <td>6.6</td>
-      <td>0.390</td>
-      <td>0.49</td>
-      <td>1.7</td>
-      <td>0.070</td>
-      <td>23.0</td>
-      <td>149.0</td>
-      <td>0.99220</td>
-      <td>3.12</td>
-      <td>0.50</td>
-      <td>11.5</td>
-    </tr>
-    <tr>
-      <th>393</th>
-      <td>8.4</td>
-      <td>0.665</td>
-      <td>0.61</td>
-      <td>2.0</td>
-      <td>0.112</td>
-      <td>13.0</td>
-      <td>95.0</td>
-      <td>0.99700</td>
-      <td>3.16</td>
-      <td>0.54</td>
-      <td>9.1</td>
-    </tr>
-    <tr>
-      <th>1238</th>
-      <td>8.1</td>
-      <td>0.730</td>
-      <td>0.00</td>
-      <td>2.5</td>
-      <td>0.081</td>
-      <td>12.0</td>
-      <td>24.0</td>
-      <td>0.99798</td>
-      <td>3.38</td>
-      <td>0.46</td>
-      <td>9.6</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>6.8</td>
-      <td>0.630</td>
-      <td>0.07</td>
-      <td>2.1</td>
-      <td>0.089</td>
-      <td>11.0</td>
-      <td>44.0</td>
-      <td>0.99530</td>
-      <td>3.47</td>
-      <td>0.55</td>
-      <td>10.4</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">fixed acidity</th>
+<th data-quarto-table-cell-role="th">volatile acidity</th>
+<th data-quarto-table-cell-role="th">citric acid</th>
+<th data-quarto-table-cell-role="th">residual sugar</th>
+<th data-quarto-table-cell-role="th">chlorides</th>
+<th data-quarto-table-cell-role="th">free sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">total sulfur dioxide</th>
+<th data-quarto-table-cell-role="th">density</th>
+<th data-quarto-table-cell-role="th">pH</th>
+<th data-quarto-table-cell-role="th">sulphates</th>
+<th data-quarto-table-cell-role="th">alcohol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">926</td>
+<td>9.4</td>
+<td>0.240</td>
+<td>0.33</td>
+<td>2.3</td>
+<td>0.061</td>
+<td>52.0</td>
+<td>73.0</td>
+<td>0.99786</td>
+<td>3.47</td>
+<td>0.90</td>
+<td>10.2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">591</td>
+<td>6.6</td>
+<td>0.390</td>
+<td>0.49</td>
+<td>1.7</td>
+<td>0.070</td>
+<td>23.0</td>
+<td>149.0</td>
+<td>0.99220</td>
+<td>3.12</td>
+<td>0.50</td>
+<td>11.5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">393</td>
+<td>8.4</td>
+<td>0.665</td>
+<td>0.61</td>
+<td>2.0</td>
+<td>0.112</td>
+<td>13.0</td>
+<td>95.0</td>
+<td>0.99700</td>
+<td>3.16</td>
+<td>0.54</td>
+<td>9.1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1238</td>
+<td>8.1</td>
+<td>0.730</td>
+<td>0.00</td>
+<td>2.5</td>
+<td>0.081</td>
+<td>12.0</td>
+<td>24.0</td>
+<td>0.99798</td>
+<td>3.38</td>
+<td>0.46</td>
+<td>9.6</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">168</td>
+<td>6.8</td>
+<td>0.630</td>
+<td>0.07</td>
+<td>2.1</td>
+<td>0.089</td>
+<td>11.0</td>
+<td>44.0</td>
+<td>0.99530</td>
+<td>3.47</td>
+<td>0.55</td>
+<td>10.4</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1085,14 +1070,14 @@ Stochastic Optimizer: Maximum iterations (1000) reached and the optimization has
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-hancock2020survey" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-hancock2020survey" class="csl-entry" role="listitem">
 Hancock, J.T. and Khoshgoftaar, T.M. (2020) <span>“Survey on categorical data for neural networks,”</span> <em>Journal of Big Data</em>, 7(1), pp. 1–41.
 </div>
-<div id="ref-parmar2019review" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parmar2019review" class="csl-entry" role="listitem">
 Parmar, A., Katariya, R. and Patel, V. (2019) <span>“A review on random forest: An ensemble classifier,”</span> in <em>International conference on intelligent data communication technologies and internet of things (ICICI) 2018</em>. Springer, pp. 758–763.
 </div>
-<div id="ref-pisner2020support" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pisner2020support" class="csl-entry" role="listitem">
 Pisner, D.A. and Schnyer, D.M. (2020) <span>“Support vector machine,”</span> in <em>Machine learning</em>. Elsevier, pp. 101–121.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
@@ -1243,9 +1228,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1310,6 +1309,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

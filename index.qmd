@@ -32,3 +32,20 @@ Working knowledge of Bash, Docker, Stata and E-views.
 I hold a PhD in Financial! Economics from [University of the Witwatersrand, Johannesburg](https://www.wits.ac.za/), South Africa. Besides, I am a Certified Accountant (CPA) and a Certified Information Systems Auditor (CISA).
 
 In my free time I swim, travel, watch documentaries and listen to music.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+if(!require(pacman)){
+    install.packages('pacman')
+}
+
+if(!require(artyfarty)){
+    remotes::install_github("datarootsio/artyfarty")
+}
+
+p_load(tidyverse, artyfarty, remotes, devtools)
+
+```
+
